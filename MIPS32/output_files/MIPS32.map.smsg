@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Control.v(51): always construct contains both blocking and non-blocking assignments File: D:/Proyectos/Proyecto1_Arqui_I/MIPS32/Control.v Line: 51

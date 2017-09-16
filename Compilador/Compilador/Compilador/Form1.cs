@@ -18,7 +18,8 @@ namespace Compilador
 
             comp.set_path(filepath);
             comp.lexico();
-            label2.Text = "File Compiled!";
+            comp.sintaxis();
+            label2.Text = comp.get_msg();
 
         }
 

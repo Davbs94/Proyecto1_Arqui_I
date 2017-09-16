@@ -39,6 +39,8 @@ namespace Compilador
 
         public void lexico()
         {
+            _error = "File Compiled!";
+            _tokens.Clear();
             string[] lines = System.IO.File.ReadAllLines(@_path);
             for (int i =0; i < lines.Length; i++)
             {
@@ -81,11 +83,11 @@ namespace Compilador
                 {
                     if (_instructions_type1.Contains(_tokens[i][0]))
                     {
-                        
+                        sintax_instruction_type1(_tokens[i]);
                     }
-                    else if (_instructions_type1.Contains(_tokens[i][0]))
+                    else if (_instructions_type2.Contains(_tokens[i][0]))
                     {
-
+                        sintax_instruction_type2(_tokens[i]);
                     }
                     else
                     {
@@ -100,7 +102,7 @@ namespace Compilador
             }
         }
 
-        public bool Sintax_instruction_type1(List<string> _instruction)
+        public bool sintax_instruction_type1(List<string> _instruction)
         {
             if (_instruction.Count != 4)
             {
@@ -120,6 +122,47 @@ namespace Compilador
                     return false;
                 }
             }
+        }
+
+        public bool sintax_instruction_type2(List<string> _instruction)
+        {
+            
+            if (_instruction.Count != 3)
+            {
+                _error = "Sintax Error: Wrong Parameters!";
+                return false;
+            }
+            else
+            {
+                if (_registers.Contains(_instruction[1].ToLower()))
+                {
+                    int x;
+                    if (_instruction[2].StartsWith("#")|| _instruction[2].StartsWith("0x")|| int.TryParse(_instruction[2], out x))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        _error = "Sintax Error: Wrong Inmediate value!";
+                        return false;
+                    }
+                }
+                else
+                {
+                    _error = "Sintax Error: Wrong Registers";
+                    return false;
+                }
+            }
+        }
+
+        public string get_msg()
+        {
+            return _error;
+        }
+
+        public void generate_code()
+        {
+
         }
     }
 }
