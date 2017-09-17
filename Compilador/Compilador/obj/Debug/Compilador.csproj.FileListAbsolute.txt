@@ -8,3 +8,13 @@ D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\Compilador\obj\Debug\Compil
 D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\Compilador\obj\Debug\Compilador.csproj.CoreCompileInputs.cache
 D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\Compilador\obj\Debug\Compilador.exe
 D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\Compilador\obj\Debug\Compilador.pdb
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\bin\Debug\Compilador.exe.config
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\bin\Debug\Compilador.exe
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\bin\Debug\Compilador.pdb
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.csprojResolveAssemblyReference.cache
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.Form1.resources
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.Properties.Resources.resources
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.csproj.GenerateResource.Cache
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.csproj.CoreCompileInputs.cache
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.exe
+D:\Proyectos\Proyecto1_Arqui_I\Compilador\Compilador\obj\Debug\Compilador.pdb

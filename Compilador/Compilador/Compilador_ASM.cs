@@ -12,6 +12,8 @@ namespace Compilador
         private string _path;
         private int _default_pc = 0;
         private string _error = "File Compiled!";
+        private string _bin_file = "";
+        private string _hex_file = "";
 
 
         private List<List<string>> _tokens = new List<List<string>>();
@@ -35,6 +37,7 @@ namespace Compilador
         public void set_path(string path)
         {
             _path = path;
+            Console.WriteLine(path);
         }
 
         public void lexico()
@@ -160,9 +163,86 @@ namespace Compilador
             return _error;
         }
 
-        public void generate_code()
+        public void generate_hex_file()
         {
+            string binpath = "D:\\program.bin";
+            string[] bin = System.IO.File.ReadAllLines(binpath);
+            int PC = 0;
+            string lines = "";
+            for(int i = 0; i < bin.Length; i++)
+            {
+                string tmp = ":04" + dec_to_hex(PC) + "00" + BinaryStringToHexString(bin[i]) + CalculateChecksum(BinaryStringToHexString(bin[i]));
+                lines = lines + tmp + "\n";
+                PC += 1;
+            }
+            lines = lines + ":00000001FF";
+            System.IO.StreamWriter file = new System.IO.StreamWriter("D:\\test.hex");
+            file.WriteLine(lines);
+
+            file.Close();
+
 
         }
+        public string BinaryStringToHexString(string binary)
+        {
+            StringBuilder result = new StringBuilder(binary.Length / 8 + 1);
+
+            int mod4Len = binary.Length % 8;
+            if (mod4Len != 0)
+            {
+                binary = binary.PadLeft(((binary.Length / 8) + 1) * 8, '0');
+            }
+
+            for (int i = 0; i < binary.Length; i += 8)
+            {
+                string eightBits = binary.Substring(i, 8);
+                result.AppendFormat("{0:X2}", Convert.ToByte(eightBits, 2));
+            }
+
+            return result.ToString();
+        }
+
+        public string dec_to_hex(int dec)
+        {
+            string tmp = Convert.ToString(dec, 16);
+            if (tmp.Length == 1)
+            {
+                tmp = "000" + tmp;
+            }
+            else if (tmp.Length == 2)
+            {
+                tmp = "00" + tmp;
+            }
+            else if (tmp.Length == 3)
+            {
+                tmp = "0" + tmp;
+            }
+            else
+            {
+                
+            }
+            return tmp.ToUpper();
+        }
+
+        public string CalculateChecksum(string data)
+        {
+            int checksum = 0;
+            Console.WriteLine("Data: " + data);
+            for (int i =0; i < (data.Length); i=i+2)
+            {
+                string tmp = data.Substring(i,2);
+                
+                int value= int.Parse(tmp, System.Globalization.NumberStyles.HexNumber);
+                checksum += value;
+                
+           
+            }
+            int complemento = (int)Math.Pow(10, checksum.ToString().Length) - checksum;
+            string check = dec_to_hex(complemento);
+            return check.Substring(check.Length - 2);
+        }
+
+      
+
     }
 }

@@ -20,6 +20,7 @@ namespace Compilador
             comp.lexico();
             comp.sintaxis();
             label2.Text = comp.get_msg();
+            comp.generate_hex_file();
 
         }
 
