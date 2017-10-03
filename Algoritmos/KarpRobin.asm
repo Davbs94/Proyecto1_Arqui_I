@@ -25,7 +25,7 @@ sw $v1, ($v0)
 addi $v1,$zero, 0x7069206d
 addi $v0, $v0, 0x4
 sw $v1, ($v0)
-addi $v1,$zero, 0x006e7573 
+addi $v1,$zero, 0x006d7573 
 addi $v0, $v0, 0x4
 sw $v1, ($v0)
 
@@ -38,16 +38,16 @@ inicio:
 	addi $a1, $zero, 11 #almacena el tamano del patron
 	addi $a2, $zero, 3 #almacena la base por la cual se multiplica
 	addi $t6, $zero, 3 #almacena la base por la cual se multiplica (temporal)
-	addi $a3, $zero, 59049 #guarda el valor de 101**10	
+	addi $a3, $zero, 59049 #guarda el valor de 3**10	
 	subi $t4, $a1, 1 #temporal de n -1 = 10 - para iterar en preHash
 	subi $t5, $a1, 1 #temporal de n -1 = 10 - para iterar en elevar
 	subi $s2, $a1, 1 
 	
-	addi $t0, $zero, 11 #almacena el offset
+	addi $t0, $zero, 0 #almacena el offset
 	addi $t1, $t0, 0x10010000 #direccion de memoria en la cual se inicial con el offset
 	addi $t3,$t1, 0 #temporal de la posicion inicial de memoria
 	
-	addi $t2, $zero, 37 #tamano del texto
+	addi $t2, $zero, 36 #tamano del texto
 	sub $t2, $t2, $t0 #se itera tamano texto - offset
 	
 	#sub $t2, $t2, $a1 #condicion de terminacion $t2 = cant texto - offset - cantLetrasPatron
