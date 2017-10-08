@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -90.201
+TNS   : -25848.332
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : -7.569
+TNS   : -13.955
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : -6.759
+TNS   : -46.265
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : -6.662
+TNS   : -45.131
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -6.308
+TNS   : -43.056
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -5.780
+TNS   : -121.055
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : 0.078
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_divider:DIV1|divcounter[25]'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.635
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.872
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.994
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
+Slack : -2.636
+TNS   : -15414.884
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.507
+TNS   : -13.876
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -88.887
+TNS   : -24520.003
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : -7.382
+TNS   : -13.687
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : -6.506
+TNS   : -44.323
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : -6.479
+TNS   : -44.366
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -6.143
+TNS   : -42.096
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -5.786
+TNS   : -117.206
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -0.093
+TNS   : -0.093
+
+Type  : Slow 1100mV 0C Model Hold 'clock_divider:DIV1|divcounter[25]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.462
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.692
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.889
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
+Slack : -2.636
+TNS   : -15346.654
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.509
+TNS   : -14.861
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -53.846
+TNS   : -15902.926
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : -4.573
+TNS   : -8.275
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : -3.901
+TNS   : -26.374
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : -3.837
+TNS   : -25.248
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -3.543
+TNS   : -69.756
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -3.506
+TNS   : -23.668
+
+Type  : Fast 1100mV 85C Model Hold 'clock_divider:DIV1|divcounter[25]'
+Slack : -0.056
+TNS   : -0.056
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
+Slack : -2.636
+TNS   : -13915.653
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.485
+TNS   : -2.824
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -48.121
+TNS   : -13481.271
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : -4.076
+TNS   : -7.456
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : -3.389
+TNS   : -22.866
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : -3.361
+TNS   : -22.309
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.166
+TNS   : -60.189
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -3.092
+TNS   : -20.874
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : -0.109
+TNS   : -0.109
+
+Type  : Fast 1100mV 0C Model Hold 'clock_divider:DIV1|divcounter[25]'
+Slack : -0.036
+TNS   : -0.041
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
+Slack : -2.636
+TNS   : -13812.119
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.482
+TNS   : -2.774
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
+Slack : 0.421
+TNS   : 0.000
+
+------------------------------------------------------------
