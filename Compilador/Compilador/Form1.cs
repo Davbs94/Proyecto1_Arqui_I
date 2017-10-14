@@ -21,7 +21,7 @@ namespace Compilador
             comp.sintaxis();
             comp.generate_binary();
             comp.generate_mif();
-            //label2.Text = comp.get_msg();
+            label2.Text = "Program Compiled!!";
             //Console.WriteLine(comp.convert("Addi"));
 
 
