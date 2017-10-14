@@ -337,12 +337,12 @@ begin
 	begin
 		if(Flags == 2'b10 | Flags == 2'b00)
 		begin
-			MuxDireccionPC <= 1;
+			MuxDireccionPC <= 0;
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
 			CodigoALUIN <= 3'b000;
-			MuxResultIN <= 2'b00;
+			MuxResultIN <= 2'b11;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
 			MuxDatoIN <= 0;
@@ -351,12 +351,12 @@ begin
 		end
 		else
 		begin
-			MuxDireccionPC <= 0;
+			MuxDireccionPC <= 1;
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
 			CodigoALUIN <= 3'b000;
-			MuxResultIN <= 2'b11;
+			MuxResultIN <= 2'b00;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
 			MuxDatoIN <= 1;
@@ -367,7 +367,7 @@ begin
 	//salto con condicion igual
 	else if(Opcode == 5'b10101)
 	begin
-		if(Flags == 2'b01)
+		if(Flags != 2'b01)
 		begin
 			MuxDireccionPC <= 1;
 			MuxSelDirRegB <= 0;
@@ -395,15 +395,15 @@ begin
 			WriteMemIN <= 0;
 			WriteRegIN <= 0;
 		end
-	end
-	//Activar modulo especializado
+	end	
+	//mult
 	else if(Opcode == 5'b10110)
 	begin
 		 MuxDireccionPC <= 0;
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 3'b110;
 		 MuxResultIN <= 2'b01;
 		 MuxDirWriteIN <= 1;
 		 MuxDirMemIN <= 1;

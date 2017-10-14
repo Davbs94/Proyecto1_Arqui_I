@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at CPU.v(107): object "MuxDirMem" differs only in case from object "muxDirMem" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 107
-Info (10281): Verilog HDL Declaration information at CPU.v(108): object "MuxDato" differs only in case from object "muxDato" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 108
+Info (10281): Verilog HDL Declaration information at CPU.v(385): object "MuxDirMem" differs only in case from object "muxDirMem" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 385
+Info (10281): Verilog HDL Declaration information at CPU.v(386): object "MuxDato" differs only in case from object "muxDato" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 386

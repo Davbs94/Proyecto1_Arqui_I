@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Process1
-Sun Oct 08 13:08:17 2017
+Thu Oct 12 21:27:40 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -98,41 +98,41 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.1%      ;
+;     Processor 2            ;  13.3%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                   ;
-+---------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------+
-; Clock Name                                  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                         ;
-+---------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------+
-; clk                                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                         ;
-; clock_divider:DIV1|divcounter[25]           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_divider:DIV1|divcounter[25] }           ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] }       ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|RegisterBank:registerBank|RF[0][10] } ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|RegisterBank:registerBank|RF[1][10] } ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|RegisterBank:registerBank|RF[2][10] } ;
-+---------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                             ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; Clock Name                               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                      ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; clk                                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                      ;
+; clock_divider:DIV1|divcounter[25]        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_divider:DIV1|divcounter[25] }        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|ALU:alu|Flags[0] }                 ;
+; CPU:cpu|PC:pc|PCout[10]                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|PC:pc|PCout[10] }                  ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] }    ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] } ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                ;
-+------------+-----------------+---------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note ;
-+------------+-----------------+---------------------------------------------+------+
-; 10.96 MHz  ; 10.96 MHz       ; clock_divider:DIV1|divcounter[25]           ;      ;
-; 106.13 MHz ; 106.13 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ;      ;
-; 115.98 MHz ; 115.98 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ;      ;
-; 120.37 MHz ; 120.37 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ;      ;
-; 131.37 MHz ; 131.37 MHz      ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ;      ;
-; 147.49 MHz ; 147.49 MHz      ; clk                                         ;      ;
-+------------+-----------------+---------------------------------------------+------+
++--------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                             ;
++------------+-----------------+------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
++------------+-----------------+------------------------------------------+------+
+; 37.55 MHz  ; 37.55 MHz       ; CPU:cpu|PC:pc|PCout[10]                  ;      ;
+; 40.31 MHz  ; 40.31 MHz       ; CPU:cpu|ALU:alu|Flags[0]                 ;      ;
+; 53.09 MHz  ; 53.09 MHz       ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ;      ;
+; 82.81 MHz  ; 82.81 MHz       ; clock_divider:DIV1|divcounter[25]        ;      ;
+; 109.55 MHz ; 109.55 MHz      ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ;      ;
+; 151.88 MHz ; 151.88 MHz      ; clk                                      ;      ;
++------------+-----------------+------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -142,32 +142,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+-----------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                   ;
-+---------------------------------------------+---------+---------------+
-; Clock                                       ; Slack   ; End Point TNS ;
-+---------------------------------------------+---------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -90.201 ; -25848.332    ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -7.569  ; -13.955       ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -6.759  ; -46.265       ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -6.662  ; -45.131       ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -6.308  ; -43.056       ;
-; clk                                         ; -5.780  ; -121.055      ;
-+---------------------------------------------+---------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                ;
++------------------------------------------+---------+---------------+
+; Clock                                    ; Slack   ; End Point TNS ;
++------------------------------------------+---------+---------------+
+; CPU:cpu|ALU:alu|Flags[0]                 ; -15.308 ; -98.941       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -15.202 ; -147.390      ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -15.017 ; -150.526      ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -8.653  ; -14.940       ;
+; clock_divider:DIV1|divcounter[25]        ; -6.684  ; -16270.214    ;
+; clk                                      ; -5.584  ; -126.896      ;
++------------------------------------------+---------+---------------+
 
 
-+---------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                  ;
-+---------------------------------------------+-------+---------------+
-; Clock                                       ; Slack ; End Point TNS ;
-+---------------------------------------------+-------+---------------+
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 0.078 ; 0.000         ;
-; clock_divider:DIV1|divcounter[25]           ; 0.178 ; 0.000         ;
-; clk                                         ; 0.382 ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.635 ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.872 ; 0.000         ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.994 ; 0.000         ;
-+---------------------------------------------+-------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -1.019 ; -16.459       ;
+; clk                                      ; 0.378  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.969  ; 0.000         ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 1.091  ; 0.000         ;
+; CPU:cpu|PC:pc|PCout[10]                  ; 1.347  ; 0.000         ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; 3.199  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -182,18 +182,18 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------------+
-; Slow 1100mV 85C Model Minimum Pulse Width Summary                    ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -2.636 ; -15414.884    ;
-; clk                                         ; -0.507 ; -13.876       ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.287  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.311  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 0.340  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.420  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                 ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; CPU:cpu|PC:pc|PCout[10]                  ; -2.433 ; -82.605       ;
+; clock_divider:DIV1|divcounter[25]        ; -2.174 ; -14777.618    ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; -1.777 ; -77.631       ;
+; clk                                      ; -0.467 ; -13.856       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.196  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.327  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -203,47 +203,47 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-----------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                 ;
-+------------+-----------------+---------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                  ; Note ;
-+------------+-----------------+---------------------------------------------+------+
-; 11.13 MHz  ; 11.13 MHz       ; clock_divider:DIV1|divcounter[25]           ;      ;
-; 106.61 MHz ; 106.61 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ;      ;
-; 118.29 MHz ; 118.29 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ;      ;
-; 124.44 MHz ; 124.44 MHz      ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ;      ;
-; 130.65 MHz ; 130.65 MHz      ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ;      ;
-; 147.36 MHz ; 147.36 MHz      ; clk                                         ;      ;
-+------------+-----------------+---------------------------------------------+------+
++--------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                              ;
++------------+-----------------+------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
++------------+-----------------+------------------------------------------+------+
+; 38.62 MHz  ; 38.62 MHz       ; CPU:cpu|PC:pc|PCout[10]                  ;      ;
+; 41.95 MHz  ; 41.95 MHz       ; CPU:cpu|ALU:alu|Flags[0]                 ;      ;
+; 56.33 MHz  ; 56.33 MHz       ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ;      ;
+; 85.9 MHz   ; 85.9 MHz        ; clock_divider:DIV1|divcounter[25]        ;      ;
+; 111.76 MHz ; 111.76 MHz      ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ;      ;
+; 150.38 MHz ; 150.38 MHz      ; clk                                      ;      ;
++------------+-----------------+------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                                    ;
-+---------------------------------------------+---------+---------------+
-; Clock                                       ; Slack   ; End Point TNS ;
-+---------------------------------------------+---------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -88.887 ; -24520.003    ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -7.382  ; -13.687       ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -6.506  ; -44.323       ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -6.479  ; -44.366       ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -6.143  ; -42.096       ;
-; clk                                         ; -5.786  ; -117.206      ;
-+---------------------------------------------+---------+---------------+
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                 ;
++------------------------------------------+---------+---------------+
+; Clock                                    ; Slack   ; End Point TNS ;
++------------------------------------------+---------+---------------+
+; CPU:cpu|ALU:alu|Flags[0]                 ; -14.609 ; -94.525       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -14.574 ; -142.198      ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -14.374 ; -144.288      ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -8.449  ; -14.567       ;
+; clock_divider:DIV1|divcounter[25]        ; -6.495  ; -15282.147    ;
+; clk                                      ; -5.650  ; -122.952      ;
++------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                    ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -0.093 ; -0.093        ;
-; clock_divider:DIV1|divcounter[25]           ; 0.188  ; 0.000         ;
-; clk                                         ; 0.381  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.462  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.692  ; 0.000         ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.889  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                 ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -0.844 ; -12.735       ;
+; clk                                      ; 0.344  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.898  ; 0.000         ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 1.002  ; 0.000         ;
+; CPU:cpu|PC:pc|PCout[10]                  ; 1.221  ; 0.000         ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; 2.703  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -258,18 +258,18 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------------+
-; Slow 1100mV 0C Model Minimum Pulse Width Summary                     ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -2.636 ; -15346.654    ;
-; clk                                         ; -0.509 ; -14.861       ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.299  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.370  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 0.381  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.411  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                  ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; CPU:cpu|PC:pc|PCout[10]                  ; -2.488 ; -86.717       ;
+; clock_divider:DIV1|divcounter[25]        ; -2.174 ; -14740.979    ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; -1.783 ; -76.535       ;
+; clk                                      ; -0.493 ; -14.915       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.185  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.304  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -279,32 +279,32 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-----------------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                                   ;
-+---------------------------------------------+---------+---------------+
-; Clock                                       ; Slack   ; End Point TNS ;
-+---------------------------------------------+---------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -53.846 ; -15902.926    ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -4.573  ; -8.275        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -3.901  ; -26.374       ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -3.837  ; -25.248       ;
-; clk                                         ; -3.543  ; -69.756       ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -3.506  ; -23.668       ;
-+---------------------------------------------+---------+---------------+
++--------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                ;
++------------------------------------------+---------+---------------+
+; Clock                                    ; Slack   ; End Point TNS ;
++------------------------------------------+---------+---------------+
+; CPU:cpu|ALU:alu|Flags[0]                 ; -10.133 ; -64.984       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -10.047 ; -94.318       ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -9.975  ; -94.538       ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -4.746  ; -8.508        ;
+; clock_divider:DIV1|divcounter[25]        ; -4.074  ; -10089.538    ;
+; clk                                      ; -3.307  ; -72.575       ;
++------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                   ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -0.056 ; -0.056        ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -0.008 ; -0.008        ;
-; clk                                         ; 0.201  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.270  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.326  ; 0.000         ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.422  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -0.729 ; -13.528       ;
+; clk                                      ; 0.201  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.475  ; 0.000         ;
+; CPU:cpu|PC:pc|PCout[10]                  ; 0.675  ; 0.000         ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.861  ; 0.000         ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; 2.169  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -319,18 +319,18 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary                    ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -2.636 ; -13915.653    ;
-; clk                                         ; -0.485 ; -2.824        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.292  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.330  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 0.332  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.408  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                 ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -2.174 ; -13960.802    ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -1.049 ; -29.826       ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; -0.842 ; -28.179       ;
+; clk                                      ; -0.463 ; -2.816        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.250  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.262  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -340,32 +340,32 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-----------------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                                    ;
-+---------------------------------------------+---------+---------------+
-; Clock                                       ; Slack   ; End Point TNS ;
-+---------------------------------------------+---------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -48.121 ; -13481.271    ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -4.076  ; -7.456        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -3.389  ; -22.866       ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -3.361  ; -22.309       ;
-; clk                                         ; -3.166  ; -60.189       ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -3.092  ; -20.874       ;
-+---------------------------------------------+---------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; CPU:cpu|ALU:alu|Flags[0]                 ; -8.853 ; -56.807       ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -8.805 ; -83.197       ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -8.717 ; -82.528       ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -4.249 ; -7.628        ;
+; clock_divider:DIV1|divcounter[25]        ; -3.553 ; -8457.421     ;
+; clk                                      ; -2.995 ; -62.843       ;
++------------------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                    ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -0.109 ; -0.109        ;
-; clock_divider:DIV1|divcounter[25]           ; -0.036 ; -0.041        ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.143  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.178  ; 0.000         ;
-; clk                                         ; 0.178  ; 0.000         ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.405  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                 ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -0.652 ; -11.477       ;
+; clk                                      ; 0.076  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.458  ; 0.000         ;
+; CPU:cpu|PC:pc|PCout[10]                  ; 0.547  ; 0.000         ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.757  ; 0.000         ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; 1.779  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -380,18 +380,18 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------------+
-; Fast 1100mV 0C Model Minimum Pulse Width Summary                     ;
-+---------------------------------------------+--------+---------------+
-; Clock                                       ; Slack  ; End Point TNS ;
-+---------------------------------------------+--------+---------------+
-; clock_divider:DIV1|divcounter[25]           ; -2.636 ; -13812.119    ;
-; clk                                         ; -0.482 ; -2.774        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0.324  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 0.360  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 0.367  ; 0.000         ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 0.421  ; 0.000         ;
-+---------------------------------------------+--------+---------------+
++-------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                  ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clock_divider:DIV1|divcounter[25]        ; -2.174 ; -13875.392    ;
+; CPU:cpu|PC:pc|PCout[10]                  ; -0.914 ; -25.652       ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; -0.727 ; -23.099       ;
+; clk                                      ; -0.470 ; -2.788        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0.273  ; 0.000         ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0.285  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -401,26 +401,26 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                           ;
-+----------------------------------------------+------------+--------+----------+---------+---------------------+
-; Clock                                        ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                             ; -90.201    ; -0.109 ; N/A      ; N/A     ; -2.636              ;
-;  CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -7.569     ; 0.405  ; N/A      ; N/A     ; 0.287               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -6.662     ; 0.143  ; N/A      ; N/A     ; 0.311               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -6.308     ; -0.109 ; N/A      ; N/A     ; 0.332               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -6.759     ; 0.178  ; N/A      ; N/A     ; 0.408               ;
-;  clk                                         ; -5.786     ; 0.178  ; N/A      ; N/A     ; -0.509              ;
-;  clock_divider:DIV1|divcounter[25]           ; -90.201    ; -0.056 ; N/A      ; N/A     ; -2.636              ;
-; Design-wide TNS                              ; -26117.794 ; -0.15  ; 0.0      ; 0.0     ; -15428.76           ;
-;  CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; -13.955    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[0][10] ; -45.131    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[1][10] ; -43.056    ; -0.109 ; N/A      ; N/A     ; 0.000               ;
-;  CPU:cpu|RegisterBank:registerBank|RF[2][10] ; -46.265    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  clk                                         ; -121.055   ; 0.000  ; N/A      ; N/A     ; -14.861             ;
-;  clock_divider:DIV1|divcounter[25]           ; -25848.332 ; -0.056 ; N/A      ; N/A     ; -15414.884          ;
-+----------------------------------------------+------------+--------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                         ;
++-------------------------------------------+------------+---------+----------+---------+---------------------+
+; Clock                                     ; Setup      ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------+------------+---------+----------+---------+---------------------+
+; Worst-case Slack                          ; -15.308    ; -1.019  ; N/A      ; N/A     ; -2.488              ;
+;  CPU:cpu|ALU:alu|Flags[0]                 ; -15.308    ; 1.779   ; N/A      ; N/A     ; -1.783              ;
+;  CPU:cpu|PC:pc|PCout[10]                  ; -15.017    ; 0.547   ; N/A      ; N/A     ; -2.488              ;
+;  CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -8.653     ; 0.458   ; N/A      ; N/A     ; 0.262               ;
+;  CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -15.202    ; 0.757   ; N/A      ; N/A     ; 0.185               ;
+;  clk                                      ; -5.650     ; 0.076   ; N/A      ; N/A     ; -0.493              ;
+;  clock_divider:DIV1|divcounter[25]        ; -6.684     ; -1.019  ; N/A      ; N/A     ; -2.174              ;
+; Design-wide TNS                           ; -16808.907 ; -16.459 ; 0.0      ; 0.0     ; -14951.71           ;
+;  CPU:cpu|ALU:alu|Flags[0]                 ; -98.941    ; 0.000   ; N/A      ; N/A     ; -77.631             ;
+;  CPU:cpu|PC:pc|PCout[10]                  ; -150.526   ; 0.000   ; N/A      ; N/A     ; -86.717             ;
+;  CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; -14.940    ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; -147.390   ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  clk                                      ; -126.896   ; 0.000   ; N/A      ; N/A     ; -14.915             ;
+;  clock_divider:DIV1|divcounter[25]        ; -16270.214 ; -16.459 ; N/A      ; N/A     ; -14777.618          ;
++-------------------------------------------+------------+---------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -577,51 +577,69 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                           ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
-; From Clock                                  ; To Clock                                    ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
-; clk                                         ; clk                                         ; 1000         ; 0        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; clk                                         ; 27           ; 27       ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; clock_divider:DIV1|divcounter[25]           ; > 2147483647 ; 0        ; 0        ; 0        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; clock_divider:DIV1|divcounter[25]           ; 55           ; 93       ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0            ; 0        ; 3453     ; 0        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0            ; 0        ; 58       ; 58       ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 9            ; 9        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 9            ; 9        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 9            ; 9        ; 0        ; 0        ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                 ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; clk                                      ; clk                                      ; 1000     ; 0        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; clk                                      ; 27       ; 27       ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; clock_divider:DIV1|divcounter[25]        ; 16698    ; 6135     ; 455      ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; clock_divider:DIV1|divcounter[25]        ; 35       ; 35       ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; clock_divider:DIV1|divcounter[25]        ; 278      ; 278      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; clock_divider:DIV1|divcounter[25]        ; 48       ; 85       ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; clock_divider:DIV1|divcounter[25]        ; 3        ; 3        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|ALU:alu|Flags[0]                 ; 7084     ; 1260     ; 7084     ; 1260     ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|ALU:alu|Flags[0]                 ; 210      ; 210      ; 210      ; 210      ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|ALU:alu|Flags[0]                 ; 308      ; 308      ; 308      ; 308      ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|ALU:alu|Flags[0]                 ; 0        ; 210      ; 0        ; 210      ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|ALU:alu|Flags[0]                 ; 14       ; 14       ; 14       ; 14       ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PC:pc|PCout[10]                  ; 3759     ; 630      ; 0        ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|PC:pc|PCout[10]                  ; 105      ; 105      ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|PC:pc|PCout[10]                  ; 161      ; 161      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PC:pc|PCout[10]                  ; 0        ; 105      ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|PC:pc|PCout[10]                  ; 7        ; 7        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0        ; 0        ; 3429     ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0        ; 0        ; 45       ; 45       ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 3542     ; 735      ; 0        ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 105      ; 105      ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 154      ; 154      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0        ; 105      ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 14       ; 14       ; 0        ; 0        ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                            ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
-; From Clock                                  ; To Clock                                    ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
-; clk                                         ; clk                                         ; 1000         ; 0        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; clk                                         ; 27           ; 27       ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; clock_divider:DIV1|divcounter[25]           ; > 2147483647 ; 0        ; 0        ; 0        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; clock_divider:DIV1|divcounter[25]           ; 55           ; 93       ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; clock_divider:DIV1|divcounter[25]           ; 2            ; 2        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0            ; 0        ; 3453     ; 0        ;
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; 0            ; 0        ; 58       ; 58       ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; 9            ; 9        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; 9            ; 9        ; 0        ; 0        ;
-; clock_divider:DIV1|divcounter[25]           ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 279          ; 0        ; 0        ; 0        ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; 9            ; 9        ; 0        ; 0        ;
-+---------------------------------------------+---------------------------------------------+--------------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                  ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; clk                                      ; clk                                      ; 1000     ; 0        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; clk                                      ; 27       ; 27       ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; clock_divider:DIV1|divcounter[25]        ; 16698    ; 6135     ; 455      ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; clock_divider:DIV1|divcounter[25]        ; 35       ; 35       ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; clock_divider:DIV1|divcounter[25]        ; 278      ; 278      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; clock_divider:DIV1|divcounter[25]        ; 48       ; 85       ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; clock_divider:DIV1|divcounter[25]        ; 3        ; 3        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|ALU:alu|Flags[0]                 ; 7084     ; 1260     ; 7084     ; 1260     ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|ALU:alu|Flags[0]                 ; 210      ; 210      ; 210      ; 210      ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|ALU:alu|Flags[0]                 ; 308      ; 308      ; 308      ; 308      ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|ALU:alu|Flags[0]                 ; 0        ; 210      ; 0        ; 210      ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|ALU:alu|Flags[0]                 ; 14       ; 14       ; 14       ; 14       ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PC:pc|PCout[10]                  ; 3759     ; 630      ; 0        ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|PC:pc|PCout[10]                  ; 105      ; 105      ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|PC:pc|PCout[10]                  ; 161      ; 161      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PC:pc|PCout[10]                  ; 0        ; 105      ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|PC:pc|PCout[10]                  ; 7        ; 7        ; 0        ; 0        ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0        ; 0        ; 3429     ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; 0        ; 0        ; 45       ; 45       ;
+; clock_divider:DIV1|divcounter[25]        ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 3542     ; 735      ; 0        ; 0        ;
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 105      ; 105      ; 0        ; 0        ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 154      ; 154      ; 0        ; 0        ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 0        ; 105      ; 0        ; 0        ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; 14       ; 14       ; 0        ; 0        ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -651,18 +669,18 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                           ;
-+---------------------------------------------+---------------------------------------------+------+-------------+
-; Target                                      ; Clock                                       ; Type ; Status      ;
-+---------------------------------------------+---------------------------------------------+------+-------------+
-; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]       ; Base ; Constrained ;
-; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; CPU:cpu|RegisterBank:registerBank|RF[0][10] ; Base ; Constrained ;
-; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; CPU:cpu|RegisterBank:registerBank|RF[1][10] ; Base ; Constrained ;
-; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; CPU:cpu|RegisterBank:registerBank|RF[2][10] ; Base ; Constrained ;
-; clk                                         ; clk                                         ; Base ; Constrained ;
-; clock_divider:DIV1|divcounter[25]           ; clock_divider:DIV1|divcounter[25]           ; Base ; Constrained ;
-+---------------------------------------------+---------------------------------------------+------+-------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                     ;
++------------------------------------------+------------------------------------------+------+-------------+
+; Target                                   ; Clock                                    ; Type ; Status      ;
++------------------------------------------+------------------------------------------+------+-------------+
+; CPU:cpu|ALU:alu|Flags[0]                 ; CPU:cpu|ALU:alu|Flags[0]                 ; Base ; Constrained ;
+; CPU:cpu|PC:pc|PCout[10]                  ; CPU:cpu|PC:pc|PCout[10]                  ; Base ; Constrained ;
+; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]    ; Base ; Constrained ;
+; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] ; Base ; Constrained ;
+; clk                                      ; clk                                      ; Base ; Constrained ;
+; clock_divider:DIV1|divcounter[25]        ; clock_divider:DIV1|divcounter[25]        ; Base ; Constrained ;
++------------------------------------------+------------------------------------------+------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -729,172 +747,287 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Oct 08 13:04:44 2017
+    Info: Processing started: Thu Oct 12 21:26:09 2017
 Info: Command: quartus_sta Process1 -c Process1
 Info: qsta_default_script.tcl version: #1
-Info (293032): Detected changes in source files.
-    Info (293033): A new file was added to the project: C:/Users/jairo-mm/Documents/Proyecto1/Diseño.bdf.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 23 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Process1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock_divider:DIV1|divcounter[25] clock_divider:DIV1|divcounter[25]
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]
-    Info (332105): create_clock -period 1.000 -name CPU:cpu|RegisterBank:registerBank|RF[0][10] CPU:cpu|RegisterBank:registerBank|RF[0][10]
-    Info (332105): create_clock -period 1.000 -name CPU:cpu|RegisterBank:registerBank|RF[1][10] CPU:cpu|RegisterBank:registerBank|RF[1][10]
-    Info (332105): create_clock -period 1.000 -name CPU:cpu|RegisterBank:registerBank|RF[2][10] CPU:cpu|RegisterBank:registerBank|RF[2][10]
+    Info (332105): create_clock -period 1.000 -name CPU:cpu|ALU:alu|Flags[0] CPU:cpu|ALU:alu|Flags[0]
+    Info (332105): create_clock -period 1.000 -name CPU:cpu|PC:pc|PCout[10] CPU:cpu|PC:pc|PCout[10]
+    Info (332105): create_clock -period 1.000 -name CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: cpu|MuxDireccionPC|C[1]~0  from: datad  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[2]~3  from: dataa  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[3]~1  from: dataf  to: combout
+    Info (332098): Cell: cpu|pcplus4|Add0~101  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~105  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~109  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~113  from: datab  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~117  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~13  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~17  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~21  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~25  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~29  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~33  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~53  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~57  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~61  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~65  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~69  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~73  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~77  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~81  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~85  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~97  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~9  from: cin  to: sumout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~0  from: datad  to: combout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~1  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -90.201
+Info (332146): Worst-case setup slack is -15.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -90.201          -25848.332 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -7.569             -13.955 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):    -6.759             -46.265 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):    -6.662             -45.131 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):    -6.308             -43.056 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):    -5.780            -121.055 clk 
-Info (332146): Worst-case hold slack is 0.078
+    Info (332119):   -15.308             -98.941 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):   -15.202            -147.390 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):   -15.017            -150.526 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -8.653             -14.940 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -6.684          -16270.214 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -5.584            -126.896 clk 
+Info (332146): Worst-case hold slack is -1.019
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.078               0.000 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.178               0.000 clock_divider:DIV1|divcounter[25] 
-    Info (332119):     0.382               0.000 clk 
-    Info (332119):     0.635               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.872               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):     0.994               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -1.019             -16.459 clock_divider:DIV1|divcounter[25] 
+    Info (332119):     0.378               0.000 clk 
+    Info (332119):     0.969               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):     1.091               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     1.347               0.000 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):     3.199               0.000 CPU:cpu|ALU:alu|Flags[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -2.433
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -15414.884 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -0.507             -13.876 clk 
-    Info (332119):     0.287               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):     0.311               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.340               0.000 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.420               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-Info (332114): Report Metastability: Found 25 synchronizer chains.
+    Info (332119):    -2.433             -82.605 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -2.174          -14777.618 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -1.777             -77.631 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):    -0.467             -13.856 clk 
+    Info (332119):     0.196               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     0.327               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: cpu|MuxDireccionPC|C[1]~0  from: datad  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[2]~3  from: dataa  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[3]~1  from: dataf  to: combout
+    Info (332098): Cell: cpu|pcplus4|Add0~101  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~105  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~109  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~113  from: datab  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~117  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~13  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~17  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~21  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~25  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~29  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~33  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~53  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~57  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~61  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~65  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~69  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~73  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~77  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~81  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~85  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~97  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~9  from: cin  to: sumout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~0  from: datad  to: combout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~1  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -88.887
+Info (332146): Worst-case setup slack is -14.609
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -88.887          -24520.003 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -7.382             -13.687 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):    -6.506             -44.323 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):    -6.479             -44.366 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):    -6.143             -42.096 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):    -5.786            -117.206 clk 
-Info (332146): Worst-case hold slack is -0.093
+    Info (332119):   -14.609             -94.525 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):   -14.574            -142.198 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):   -14.374            -144.288 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -8.449             -14.567 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -6.495          -15282.147 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -5.650            -122.952 clk 
+Info (332146): Worst-case hold slack is -0.844
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.093              -0.093 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.188               0.000 clock_divider:DIV1|divcounter[25] 
-    Info (332119):     0.381               0.000 clk 
-    Info (332119):     0.462               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.692               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):     0.889               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -0.844             -12.735 clock_divider:DIV1|divcounter[25] 
+    Info (332119):     0.344               0.000 clk 
+    Info (332119):     0.898               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):     1.002               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     1.221               0.000 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):     2.703               0.000 CPU:cpu|ALU:alu|Flags[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -2.488
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -15346.654 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -0.509             -14.861 clk 
-    Info (332119):     0.299               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):     0.370               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.381               0.000 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.411               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-Info (332114): Report Metastability: Found 25 synchronizer chains.
+    Info (332119):    -2.488             -86.717 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -2.174          -14740.979 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -1.783             -76.535 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):    -0.493             -14.915 clk 
+    Info (332119):     0.185               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     0.304               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: cpu|MuxDireccionPC|C[1]~0  from: datad  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[2]~3  from: dataa  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[3]~1  from: dataf  to: combout
+    Info (332098): Cell: cpu|pcplus4|Add0~101  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~105  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~109  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~113  from: datab  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~117  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~13  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~17  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~21  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~25  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~29  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~33  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~53  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~57  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~61  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~65  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~69  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~73  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~77  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~81  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~85  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~97  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~9  from: cin  to: sumout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~0  from: datad  to: combout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~1  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -53.846
+Info (332146): Worst-case setup slack is -10.133
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -53.846          -15902.926 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -4.573              -8.275 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):    -3.901             -26.374 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):    -3.837             -25.248 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):    -3.543             -69.756 clk 
-    Info (332119):    -3.506             -23.668 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-Info (332146): Worst-case hold slack is -0.056
+    Info (332119):   -10.133             -64.984 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):   -10.047             -94.318 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):    -9.975             -94.538 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -4.746              -8.508 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -4.074          -10089.538 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -3.307             -72.575 clk 
+Info (332146): Worst-case hold slack is -0.729
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.056              -0.056 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -0.008              -0.008 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
+    Info (332119):    -0.729             -13.528 clock_divider:DIV1|divcounter[25] 
     Info (332119):     0.201               0.000 clk 
-    Info (332119):     0.270               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.326               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):     0.422               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):     0.475               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):     0.675               0.000 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):     0.861               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     2.169               0.000 CPU:cpu|ALU:alu|Flags[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -13915.653 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -0.485              -2.824 clk 
-    Info (332119):     0.292               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):     0.330               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.332               0.000 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.408               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-Info (332114): Report Metastability: Found 25 synchronizer chains.
+    Info (332119):    -2.174          -13960.802 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -1.049             -29.826 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -0.842             -28.179 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):    -0.463              -2.816 clk 
+    Info (332119):     0.250               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     0.262               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: cpu|MuxDireccionPC|C[1]~0  from: datad  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[2]~3  from: dataa  to: combout
+    Info (332098): Cell: cpu|MuxDireccionPC|C[3]~1  from: dataf  to: combout
+    Info (332098): Cell: cpu|pcplus4|Add0~101  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~105  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~109  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~113  from: datab  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~117  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~13  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~17  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~21  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~25  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~29  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~33  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~53  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~57  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~61  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~65  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~69  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~73  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~77  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~81  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~85  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~97  from: cin  to: sumout
+    Info (332098): Cell: cpu|pcplus4|Add0~9  from: cin  to: sumout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~0  from: datad  to: combout
+    Info (332098): Cell: cpu|unidadControl|MuxDireccionPC~1  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -48.121
+Info (332146): Worst-case setup slack is -8.853
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -48.121          -13481.271 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -4.076              -7.456 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):    -3.389             -22.866 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):    -3.361             -22.309 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):    -3.166             -60.189 clk 
-    Info (332119):    -3.092             -20.874 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-Info (332146): Worst-case hold slack is -0.109
+    Info (332119):    -8.853             -56.807 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):    -8.805             -83.197 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):    -8.717             -82.528 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -4.249              -7.628 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -3.553           -8457.421 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -2.995             -62.843 clk 
+Info (332146): Worst-case hold slack is -0.652
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.109              -0.109 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):    -0.036              -0.041 clock_divider:DIV1|divcounter[25] 
-    Info (332119):     0.143               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.178               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-    Info (332119):     0.178               0.000 clk 
-    Info (332119):     0.405               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):    -0.652             -11.477 clock_divider:DIV1|divcounter[25] 
+    Info (332119):     0.076               0.000 clk 
+    Info (332119):     0.458               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+    Info (332119):     0.547               0.000 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):     0.757               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     1.779               0.000 CPU:cpu|ALU:alu|Flags[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -13812.119 clock_divider:DIV1|divcounter[25] 
-    Info (332119):    -0.482              -2.774 clk 
-    Info (332119):     0.324               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
-    Info (332119):     0.360               0.000 CPU:cpu|RegisterBank:registerBank|RF[1][10] 
-    Info (332119):     0.367               0.000 CPU:cpu|RegisterBank:registerBank|RF[0][10] 
-    Info (332119):     0.421               0.000 CPU:cpu|RegisterBank:registerBank|RF[2][10] 
-Info (332114): Report Metastability: Found 25 synchronizer chains.
+    Info (332119):    -2.174          -13875.392 clock_divider:DIV1|divcounter[25] 
+    Info (332119):    -0.914             -25.652 CPU:cpu|PC:pc|PCout[10] 
+    Info (332119):    -0.727             -23.099 CPU:cpu|ALU:alu|Flags[0] 
+    Info (332119):    -0.470              -2.788 clk 
+    Info (332119):     0.273               0.000 CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10] 
+    Info (332119):     0.285               0.000 CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 944 megabytes
-    Info: Processing ended: Sun Oct 08 13:08:17 2017
-    Info: Elapsed time: 00:03:33
-    Info: Total CPU time (on all processors): 00:03:15
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1081 megabytes
+    Info: Processing ended: Thu Oct 12 21:27:40 2017
+    Info: Elapsed time: 00:01:31
+    Info: Total CPU time (on all processors): 00:01:38
 
 

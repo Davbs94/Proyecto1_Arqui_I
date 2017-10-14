@@ -10,7 +10,7 @@ end
 
 always @(posedge clk)
 begin
-PCout <= PCin;
+	PCout <= PCin;
 end
 
 endmodule

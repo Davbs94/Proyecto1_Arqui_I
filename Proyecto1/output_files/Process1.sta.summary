@@ -2,292 +2,292 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
-Slack : -90.201
-TNS   : -25848.332
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -15.308
+TNS   : -98.941
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : -15.202
+TNS   : -147.390
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -15.017
+TNS   : -150.526
 
 Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : -7.569
-TNS   : -13.955
+Slack : -8.653
+TNS   : -14.940
 
-Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : -6.759
-TNS   : -46.265
-
-Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : -6.662
-TNS   : -45.131
-
-Type  : Slow 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -6.308
-TNS   : -43.056
+Type  : Slow 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -6.684
+TNS   : -16270.214
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -5.780
-TNS   : -121.055
-
-Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : 0.078
-TNS   : 0.000
+Slack : -5.584
+TNS   : -126.896
 
 Type  : Slow 1100mV 85C Model Hold 'clock_divider:DIV1|divcounter[25]'
-Slack : 0.178
-TNS   : 0.000
+Slack : -1.019
+TNS   : -16.459
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.635
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.872
+Slack : 0.378
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.994
+Slack : 0.969
 TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|PC:pc|PCout[10]'
+Slack : 1.347
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : 3.199
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -2.433
+TNS   : -82.605
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
-Slack : -2.636
-TNS   : -15414.884
+Slack : -2.174
+TNS   : -14777.618
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -1.777
+TNS   : -77.631
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.507
-TNS   : -13.876
+Slack : -0.467
+TNS   : -13.856
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.196
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.287
+Slack : 0.327
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.311
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -14.609
+TNS   : -94.525
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : 0.340
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : -14.574
+TNS   : -142.198
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.420
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
-Slack : -88.887
-TNS   : -24520.003
+Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -14.374
+TNS   : -144.288
 
 Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : -7.382
-TNS   : -13.687
+Slack : -8.449
+TNS   : -14.567
 
-Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : -6.506
-TNS   : -44.323
-
-Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : -6.479
-TNS   : -44.366
-
-Type  : Slow 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -6.143
-TNS   : -42.096
+Type  : Slow 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -6.495
+TNS   : -15282.147
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -5.786
-TNS   : -117.206
-
-Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -0.093
-TNS   : -0.093
+Slack : -5.650
+TNS   : -122.952
 
 Type  : Slow 1100mV 0C Model Hold 'clock_divider:DIV1|divcounter[25]'
-Slack : 0.188
-TNS   : 0.000
+Slack : -0.844
+TNS   : -12.735
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.381
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.462
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.692
+Slack : 0.344
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.889
+Slack : 0.898
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 1.002
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|PC:pc|PCout[10]'
+Slack : 1.221
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : 2.703
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -2.488
+TNS   : -86.717
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
-Slack : -2.636
-TNS   : -15346.654
+Slack : -2.174
+TNS   : -14740.979
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -1.783
+TNS   : -76.535
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.509
-TNS   : -14.861
+Slack : -0.493
+TNS   : -14.915
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.185
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.299
+Slack : 0.304
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.370
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -10.133
+TNS   : -64.984
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : 0.381
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : -10.047
+TNS   : -94.318
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.411
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
-Slack : -53.846
-TNS   : -15902.926
+Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -9.975
+TNS   : -94.538
 
 Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : -4.573
-TNS   : -8.275
+Slack : -4.746
+TNS   : -8.508
 
-Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : -3.901
-TNS   : -26.374
-
-Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : -3.837
-TNS   : -25.248
+Type  : Fast 1100mV 85C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -4.074
+TNS   : -10089.538
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.543
-TNS   : -69.756
-
-Type  : Fast 1100mV 85C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -3.506
-TNS   : -23.668
+Slack : -3.307
+TNS   : -72.575
 
 Type  : Fast 1100mV 85C Model Hold 'clock_divider:DIV1|divcounter[25]'
-Slack : -0.056
-TNS   : -0.056
-
-Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -0.008
-TNS   : -0.008
+Slack : -0.729
+TNS   : -13.528
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
 Slack : 0.201
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.270
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.326
-TNS   : 0.000
-
 Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.422
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|PC:pc|PCout[10]'
+Slack : 0.675
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.861
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : 2.169
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
-Slack : -2.636
-TNS   : -13915.653
+Slack : -2.174
+TNS   : -13960.802
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -1.049
+TNS   : -29.826
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -0.842
+TNS   : -28.179
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.485
-TNS   : -2.824
+Slack : -0.463
+TNS   : -2.816
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.250
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.292
+Slack : 0.262
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.330
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -8.853
+TNS   : -56.807
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : 0.332
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : -8.805
+TNS   : -83.197
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.408
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
-Slack : -48.121
-TNS   : -13481.271
+Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -8.717
+TNS   : -82.528
 
 Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : -4.076
-TNS   : -7.456
+Slack : -4.249
+TNS   : -7.628
 
-Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : -3.389
-TNS   : -22.866
-
-Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : -3.361
-TNS   : -22.309
+Type  : Fast 1100mV 0C Model Setup 'clock_divider:DIV1|divcounter[25]'
+Slack : -3.553
+TNS   : -8457.421
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.166
-TNS   : -60.189
-
-Type  : Fast 1100mV 0C Model Setup 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -3.092
-TNS   : -20.874
-
-Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : -0.109
-TNS   : -0.109
+Slack : -2.995
+TNS   : -62.843
 
 Type  : Fast 1100mV 0C Model Hold 'clock_divider:DIV1|divcounter[25]'
-Slack : -0.036
-TNS   : -0.041
-
-Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.143
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.178
-TNS   : 0.000
+Slack : -0.652
+TNS   : -11.477
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.178
+Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.405
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|PC:pc|PCout[10]'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.757
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : 1.779
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:DIV1|divcounter[25]'
-Slack : -2.636
-TNS   : -13812.119
+Slack : -2.174
+TNS   : -13875.392
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PC:pc|PCout[10]'
+Slack : -0.914
+TNS   : -25.652
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|ALU:alu|Flags[0]'
+Slack : -0.727
+TNS   : -23.099
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.482
-TNS   : -2.774
+Slack : -0.470
+TNS   : -2.788
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeIFD:pipeIFD|InmCorrimOUT[10]'
+Slack : 0.273
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[0]'
-Slack : 0.324
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[1][10]'
-Slack : 0.360
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[0][10]'
-Slack : 0.367
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:cpu|RegisterBank:registerBank|RF[2][10]'
-Slack : 0.421
+Slack : 0.285
 TNS   : 0.000
 
 ------------------------------------------------------------

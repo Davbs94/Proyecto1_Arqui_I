@@ -44,8 +44,8 @@ else if(CtrlFunc == 3'b101) //CMP
 			else
 				Flags <= 2'b00;
 	end
-else if(CtrlFunc == 3'b110) //NOT
-	Result <= ~A;
+else if(CtrlFunc == 3'b110) //mult	
+	Result <= A * B;
 else if(CtrlFunc == 3'b111) //shifter
 	Result <= {A[15:0], {16{1'b0}}};
 else

@@ -3,7 +3,7 @@ module Tester(
     output [20:0] led_Reg
     );
 
-	 
+	 /*
 	 wire [31:0] Reg0;
 	 wire [31:0] Reg1;
 	 wire [31:0] Reg2;
@@ -30,10 +30,13 @@ module Tester(
 	 wire [31:0] Reg23;
 	 wire [31:0] Reg24;
 	 wire [31:0] Reg25;
+	 wire [31:0]newpc;
+	wire [31:0]pcout;
+	wire [31:0]DireccionIFDOUT;
 	 
 
-parameter N = 50_000_000;
-//-- Señal de reloj de 1mHz. Salida del divisor
+parameter N = 50000000;
+//-- Señal de reloj de 100Hz. Salida del divisor
 wire clk_xHZ;
 //-- Instanciar el divisor
 clock_divider #(N)
@@ -44,17 +47,17 @@ clock_divider #(N)
 
 CPU cpu(clk_xHZ, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Reg8, Reg9,
 Reg10, Reg11, Reg12, Reg13, Reg14, Reg15, Reg16, Reg17, Reg18, Reg19,
-Reg20, Reg21, Reg22, Reg23, Reg24, Reg25);
+Reg20, Reg21, Reg22, Reg23, Reg24, Reg25, newpc, pcout, DireccionIFDOUT);
 	
-seven_segments sevenSegs1 ( .num(Reg0), //input 
+seven_segments sevenSegs1 ( .num(newpc), //input 
 									.seven_seg(led_Reg[6:0]) //output
 							);
 
-seven_segments sevenSegs2 ( .num(Reg1), //input 
+seven_segments sevenSegs2 ( .num(pcout), //input 
 									.seven_seg(led_Reg[13:7]) //output
 							);
 
-seven_segments sevenSegs3 ( .num(Reg2), //input 
+seven_segments sevenSegs3 ( .num(DireccionIFDOUT), //input 
 									.seven_seg(led_Reg[20:14]) //output
-							);							
+							);	*/						
 endmodule

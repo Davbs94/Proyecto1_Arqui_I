@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim
+vCPU
+Z1 !s110 1508007188
+!i10b 1
+!s100 6bhWBZTje2<JN2Bg]RNe_2
+InKBdPXPTnYZ4<[>fJ;XMZ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1508007182
+8Process1.vo
+FProcess1.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1508007187.000000
+!s107 Process1.vo|
+!s90 -work|work|Process1.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@c@p@u
+vCPU_vlg_vec_tst
+R1
+!i10b 1
+!s100 XF5l_i?91Kdz[Hnf21EUE2
+II8T7TKhlER86emB7_]9Wc1
+R2
+R0
+w1508007180
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1508007188.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R4
+R5
+n@c@p@u_vlg_vec_tst

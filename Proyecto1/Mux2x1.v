@@ -9,6 +9,7 @@ initial begin
 C <= 0;
 end
 
+
 always @(*)
 begin
 

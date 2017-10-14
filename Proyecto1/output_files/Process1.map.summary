@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Oct 04 20:14:20 2017
+Analysis & Synthesis Status : Successful - Sat Oct 14 12:50:15 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Process1
-Top-level Entity Name : Tester
+Top-level Entity Name : CPU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2110
-Total pins : 22
+Total registers : 1262
+Total pins : 380
 Total virtual pins : 0
-Total block memory bits : 2,098,432
-Total DSP Blocks : 0
+Total block memory bits : 2,099,200
+Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
