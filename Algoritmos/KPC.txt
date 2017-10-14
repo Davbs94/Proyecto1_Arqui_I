@@ -4,7 +4,12 @@ inicio:
 	
 	addi R3, R3, (0)
 	
-	addi R4, R4, (7741639)
+	addi R4, R4 (350000)
+	addi R22, R22, (220)
+	
+	mult R4, R4, R22
+	addi R4, R4, (41639)
+	
 	addi R5, R5, (11) 
 	addi R6, R6, (3) 
 	addi R7, R7, (3) 
