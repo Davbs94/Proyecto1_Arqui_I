@@ -2,70 +2,70 @@ addi R1, R1, 12
 
 inicio:
 	
-	addi R3, R3, 0 
+	addi R3, R3, (0)
 	
-	addi R4, R4, 7741639
-	addi R5, R5, 11 
-	addi R6, R6, 3 
-	addi R7, R7, 3 
-	addi R8, R8, 59049
-	subi R9, R5, 1 
-	subi R10, R5, 1 
-	subi R11, R5, 1 
+	addi R4, R4, (7741639)
+	addi R5, R5, (11) 
+	addi R6, R6, (3) 
+	addi R7, R7, (3) 
+	addi R8, R8, (59049)
+	subi R9, R5, (1) 
+	subi R10, R5, (1)
+	subi R11, R5, (1) 
 	
-	addi R12, R12, 0
-	addi R13, R12, 12
-	addi R14, R13, 0 
+	addi R12, R12, (0)
+	addi R13, R12, (12)
+	addi R14, R13, (0) 
 	
-	addi R15, R15, 36
+	addi R15, R15, (36)
 	sub R15, R15, R12
 	
-	#sub $17, $17, $7
+	sub R15, R15 , R5
 	
-	addi R16, R16, 0
-	addi R17, R17, 1	
-	addi R18, R18, 1
+	addi R16, R16, (0)
+	addi R17, R17, (1)	
+	addi R18, R18, (1)
 elevar:
 	beq R10, R17, preHash
-	mul R7, R7, R6
-	subi R10, R10, 1
+	mult R7, R7, R6
+	subi R10, R10, (1)
 	j elevar	
 	
 preHash:
-	lb R19, (R14) 
-	addi R14, R14, 1 
-	mul R19, R19, R7 
+	lb R19, R14 
+	addi R14, R14, (1) 
+	mult R19, R19, R7 
 	add R16, R16, R19 
-	subi R9, R9, 1
-	addi R10, R9, 0
-	addi R7, R6, 0
+	subi R9, R9, (1)
+	addi R10, R9, (0)
+	addi R7, R6, (0)
 	bne R19, R18, elevar
 	
-	lb R19, (R14) 
-	addi R14, R14, 1 
-	mul R19, R19, R6 
+	lb R19, R14 
+	addi R14, R14, (1) 
+	mult R19, R19, R6 
 	add R16, R16, R19 
-	lb R19, (R14) 
-	addi R14, R14, 1 
+	lb R19, R14 
+	addi R14, R14, (1) 
 	add R16, R16, R19 
 	
-	beq R16, $6, sumar
+	beq R16, R4, sumar
 
 KarpRobin:
 	beq R15, R11, end	
-	lb R7, (R13)
-	addi R13, R13, 1 
-	mul R7, R7, R8 
+	lb R7, R13
+	addi R13, R13, (1) 
+	mult R7, R7, R8 
 	sub R16, R16, R7 
-	mul R16, R16, R6 
-	lb R7, (R14) 
-	addi R14, R14, 1 
-	add R16, R16, $9 
-	subi R15, R15, 1
+	mult R16, R16, R6 
+	lb R7, R14 
+	addi R14, R14, (1) 
+	add R16, R16, R7 
+	subi R15, R15, (1)
 	bne R16, R4, KarpRobin
 
 sumar:
-	addi R3, R3, 1
+	addi R3, R3, (1)
 	j KarpRobin	
 	
 end:	

@@ -87,7 +87,7 @@ namespace Compilador
                         }
                         else
                         {
-                            tmp2.Add(tmp[j]);
+                            tmp2.Add(tmp[j].ToLower());
                         }
                     }
                     if (tmp2.Count == 0)
@@ -109,7 +109,7 @@ namespace Compilador
                 string tmp = "|";
                 for (int y = 0; y < _tokens[x].Count; y++)
                 {
-                    tmp = tmp + _tokens[x][y] + "|";
+                    tmp = tmp + _tokens[x][y].ToLower() + "|";
                 }
 
                 file.WriteLine(tmp);
