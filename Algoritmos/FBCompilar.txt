@@ -1,0 +1,41 @@
+addi R3, R3, 0
+addi R4, R4, 4
+div R5, R5, R4
+
+div R6, $R3, $R4 
+mul R6, R6, R4 
+sub R6, R3, R6
+
+add R7, R1, R5 
+
+inicio:
+	addi R8, R8, 0 
+	addi R9, R9, 0 
+	addi R10, R10, 0 
+	addi R11, R11, 11 
+	addi R12, R12, 36 
+	sub R12, R12, R3
+	add R14, R7, R3 
+	addi R16, R16, 0 
+
+comparacion:	
+	beq R9, 12, final 
+	lb R15, (R16) 
+	lb R13, (R14) 
+	addi R9, R9, 1 
+	addi R14, R14, 1
+	bne R15, R13, comparacion 
+	addi R8, R8, 1 
+	addi R16, R16, 1
+	beq R8, R11, sumar 
+	j comparacion
+	
+sumar:
+	addi R10, R10, 1 
+	andi R8, R8, 0 
+	andi R16, R16, 0
+	addi R16, R16, 0 
+	j comparacion
+	
+final:
+

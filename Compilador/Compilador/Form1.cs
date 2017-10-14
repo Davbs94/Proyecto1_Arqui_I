@@ -19,8 +19,11 @@ namespace Compilador
             comp.set_path(filepath);
             comp.lexico();
             comp.sintaxis();
-            label2.Text = comp.get_msg();
-            comp.generate_hex_file();
+            comp.generate_binary();
+            comp.generate_mif();
+            //label2.Text = comp.get_msg();
+            //Console.WriteLine(comp.convert("Addi"));
+
 
         }
 

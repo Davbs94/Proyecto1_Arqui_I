@@ -1,0 +1,9 @@
+|sub|r2|r4|r5|
+|nop|
+|nop|
+|nop|
+|add|r6|r2|r3|
+|nop|
+|nop|
+|add|r11|r10|r5|
+|lb|r3|r6|
