@@ -17,20 +17,48 @@ namespace Compilador
 
 
         private List<List<string>> _tokens = new List<List<string>>();
+
         private List<String> _instructions_type1 = new List<string>(new string[] 
-                            {"add","sub","mult"});
+                            {});
         private List<String> _instructions_type2 = new List<string>(new string[]
-                            {"lw","sw" });
-        private List<String> _instructions_type3 = new List<string>(new string[]
-                            {"beq","bne" });
+                            {});
+
+        private List<String> _codes_type1 = new List<string>(new string[]
+                            {});
+        private List<String> _codes_type2 = new List<string>(new string[]
+                            {});
         private List<string> _registers = new List<string>(new string[] 
-                            {"r0","r1","r2","r3","r4","r5","r6","r7" });
+                            {});
+        private List<string> _codes_registers = new List<string>(new string[]
+                            {});
 
         private List<string> _labels = new List<string>();
         private List<int> _labels_mem = new List<int>();
 
         public Compilador_ASM()
         {
+            
+            string path1 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)+ @"\Instructions1.txt");
+            string path2 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Instructions2.txt");
+            string path4 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Registers.txt");
+            string[] lines1 = System.IO.File.ReadAllLines(path1);
+            string[] lines2 = System.IO.File.ReadAllLines(path2);
+            string[] lines4 = System.IO.File.ReadAllLines(path4);
+            for (int i = 0; i < lines1.Length; i++)
+            {
+                _instructions_type1.Add(lines1[i].Split('@')[0]);
+                _codes_type1.Add(lines1[i].Split('@')[1]);
+            }
+            for (int i = 0; i < lines2.Length; i++)
+            {
+                _instructions_type2.Add(lines2[i].Split('@')[0]);
+                _codes_type2.Add(lines2[i].Split('@')[1]);
+            }
+            for (int i = 0; i < lines4.Length; i++)
+            {
+                _registers.Add(lines4[i].Split('@')[0]);
+                _codes_registers.Add(lines4[i].Split('@')[1]);
+            }
 
         }
 
@@ -45,14 +73,15 @@ namespace Compilador
             _error = "File Compiled!";
             _tokens.Clear();
             string[] lines = System.IO.File.ReadAllLines(@_path);
-            for (int i =0; i < lines.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                string[] tmp = lines[i].Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] tmp = lines[i].Split(new[] { ' ', ',','\t'}, StringSplitOptions.RemoveEmptyEntries);
+                
                
                     List<string> tmp2= new List<string>();
                     for (int j =0; j<tmp.Length;j++)
                     {
-                        if (tmp[j].StartsWith(";"))
+                        if (tmp[j].StartsWith("#"))
                         {                        
                             break;
                         }
@@ -70,6 +99,22 @@ namespace Compilador
                         _tokens.Add(tmp2);
                     }      
             }
+
+            
+            string path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Program.tok");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+            
+            for (int x = 0; x < _tokens.Count; x++)
+            {
+                string tmp = "|";
+                for (int y = 0; y < _tokens[x].Count; y++)
+                {
+                    tmp = tmp + _tokens[x][y] + "|";
+                }
+
+                file.WriteLine(tmp);
+            }
+            file.Close();
         }
 
         public void sintaxis()
@@ -78,24 +123,94 @@ namespace Compilador
             {
                 if (_tokens[i][0].EndsWith(":"))
                 {
-                    _labels.Add(_tokens[i][0].Remove(':'));
+                    _labels.Add(_tokens[i][0].Remove(_tokens[i][0].Length - 1));
                     _labels_mem.Add(_default_pc + i);
+                    _default_pc = _default_pc - 1;
+
                 }
-                else if (_instructions_type1.Contains(_tokens[i][0])||_instructions_type2.Contains(_tokens[i][0])
-                            ||_instructions_type3.Contains(_tokens[i][0]))
+                else if (_instructions_type1.Contains(_tokens[i][0])||_instructions_type2.Contains(_tokens[i][0]))
                 {
                     if (_instructions_type1.Contains(_tokens[i][0]))
                     {
-                        sintax_instruction_type1(_tokens[i]);
+                        int a = check_nops(i);
+                        Console.WriteLine(a);
+                        if (a == 3)
+                        {
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i + 1, b);
+                            _tokens.Insert(i + 2, b);
+                            _tokens.Insert(i + 3, b);
+                        }
+                        else if (a == 2)
+                        {
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i + 1, b);
+                            _tokens.Insert(i + 2, b);
+
+                        }
+                        else if (a == 1)
+                        {
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i + 1, b);
+                            
+                        }
+                       // sintax_instruction_type1(_tokens[i]);
                     }
                     else if (_instructions_type2.Contains(_tokens[i][0]))
                     {
-                        sintax_instruction_type2(_tokens[i]);
-                    }
-                    else
-                    {
 
+                        // sintax_instruction_type2(_tokens[i]);
+                        if (_tokens[i][0].ToLower() == "j")
+                        {
+                            
+                            
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i+1, b);
+                            _tokens.Insert(i+2, b);
+                            _tokens.Insert(i+3, b);
+                        }
+                        else if (_tokens[i][0].ToLower() == "bne" || _tokens[i][0].ToLower() == "beq")
+                        {
+                            
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i + 1, b);
+                            _tokens.Insert(i + 2, b);
+                            _tokens.Insert(i + 3, b);
+                        }
+                        else
+                        {
+                            int a = check_nops(i);
+                            if (a == 3)
+                            {
+                                List<string> b = new List<string>();
+                                b.Add("nop");
+                                _tokens.Insert(i + 1, b);
+                                _tokens.Insert(i + 2, b);
+                                _tokens.Insert(i + 3, b);
+                            }
+                            else if (a == 2)
+                            {
+                                List<string> b = new List<string>();
+                                b.Add("nop");
+                                _tokens.Insert(i + 1, b);
+                                _tokens.Insert(i + 2, b);
+
+                            }
+                            else if (a == 1)
+                            {
+                                List<string> b = new List<string>();
+                                b.Add("nop");
+                                _tokens.Insert(i + 1, b);
+
+                            }
+                        }
                     }
+                    
                 }
                 else
                 {
@@ -103,6 +218,31 @@ namespace Compilador
                     break;
                 }
             }
+
+            string path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Program.lb");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+
+            for (int x = 0; x < _labels.Count; x++)
+            {
+
+                file.WriteLine(_labels[x] + "|" + _labels_mem[x]);
+            }
+            file.Close();
+
+            string path2 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Program.tok");
+            System.IO.StreamWriter file2 = new System.IO.StreamWriter(path2);
+
+            for (int x = 0; x < _tokens.Count; x++)
+            {
+                string tmp = "|";
+                for (int y = 0; y < _tokens[x].Count; y++)
+                {
+                    tmp = tmp + _tokens[x][y] + "|";
+                }
+
+                file2.WriteLine(tmp);
+            }
+            file2.Close();
         }
 
         public bool sintax_instruction_type1(List<string> _instruction)
@@ -163,86 +303,230 @@ namespace Compilador
             return _error;
         }
 
-        public void generate_hex_file()
+        public void  generate_binary()
         {
-            string binpath = "D:\\program.bin";
-            string[] bin = System.IO.File.ReadAllLines(binpath);
-            int PC = 0;
-            string lines = "";
-            for(int i = 0; i < bin.Length; i++)
+            string tmp = "";
+            for (int i = 0; i < _tokens.Count; i++)
             {
-                string tmp = ":04" + dec_to_hex(PC) + "00" + BinaryStringToHexString(bin[i]) + CalculateChecksum(BinaryStringToHexString(bin[i]));
-                lines = lines + tmp + "\n";
-                PC += 1;
-            }
-            lines = lines + ":00000001FF";
-            System.IO.StreamWriter file = new System.IO.StreamWriter("D:\\test.hex");
-            file.WriteLine(lines);
 
+                    string opcode = convert(_tokens[i][0]);
+
+                    if (opcode == "00000"|| opcode == "00010" || opcode == "00100" || opcode == "00110" || opcode == "00111" ||
+                        opcode == "10110" || opcode == "01001" || opcode == "10000" || opcode  == "10001")
+                    {
+                    Console.WriteLine(opcode);
+                        tmp = tmp + convert(_tokens[i][0]) + convert(_tokens[i][1]) + convert(_tokens[i][2]) + convert(_tokens[i][3]) + "000000000000" + "\n";
+                    }
+                    else if (opcode == "01010" || opcode == "01100" || opcode == "01110"  )
+                    {
+                        tmp = tmp + convert(_tokens[i][0]) + convert(_tokens[i][1]) + convert(_tokens[i][2]) + "00000" + "000000000000" + "\n";
+                    }
+                    else if (opcode == "01000")
+                    {
+                        tmp = tmp +  convert(_tokens[i][0]) + convert(_tokens[i][1]) + "00000" + "00000" + "000000000000" + "\n" ;
+                    }
+                    else if (opcode == "00001" || opcode == "00011" || opcode == "00101" || opcode == "10100" || opcode == "10101")
+                    {
+                        tmp = tmp + convert(_tokens[i][0]) + convert(_tokens[i][1]) + convert(_tokens[i][2]) + convert(_tokens[i][3]) + "\n";
+                    }
+                    else if (opcode == "10011")
+                    {
+                        tmp = tmp + convert(_tokens[i][0]) + "00000" + "00000" + convert(_tokens[i][1]) + "\n";
+                    }
+                    else if (opcode == "01011" || opcode == "01101" || opcode == "01111")
+                    {
+                        tmp = tmp + convert(_tokens[i][0]) + convert(_tokens[i][1]) + "00000" + convert(_tokens[i][2]) + "\n";
+                    }
+                    else if (opcode == "11111")
+                    {
+                        tmp = tmp + convert(_tokens[i][0]) + "000000000000000000000000000" + "\n";
+                    }
+                    else
+                    {
+                        
+                        
+                    }
+
+              
+               
+            }
+            
+            string path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Program.bin");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+            file.WriteLine(tmp);
             file.Close();
-
-
-        }
-        public string BinaryStringToHexString(string binary)
-        {
-            StringBuilder result = new StringBuilder(binary.Length / 8 + 1);
-
-            int mod4Len = binary.Length % 8;
-            if (mod4Len != 0)
-            {
-                binary = binary.PadLeft(((binary.Length / 8) + 1) * 8, '0');
-            }
-
-            for (int i = 0; i < binary.Length; i += 8)
-            {
-                string eightBits = binary.Substring(i, 8);
-                result.AppendFormat("{0:X2}", Convert.ToByte(eightBits, 2));
-            }
-
-            return result.ToString();
         }
 
-        public string dec_to_hex(int dec)
+        public void generate_mif()
         {
-            string tmp = Convert.ToString(dec, 16);
-            if (tmp.Length == 1)
+            int a = 0;
+            string path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Program.bin");
+            string[] lines = System.IO.File.ReadAllLines(path);
+            string tmp = "WIDTH=32;\nDEPTH = 65536;\n\nADDRESS_RADIX = UNS;\nDATA_RADIX = BIN;\n\nCONTENT BEGIN\n";
+            for (int i = 0; i < lines.Length; i++)
             {
-                tmp = "000" + tmp;
+                if (lines[i].Length < 31)
+                {
+                    a++;
+                }
+                else
+                {
+                    tmp = tmp + "       " + i.ToString() + " : " + lines[i] + ";\n";
+                }             
+            };
+            tmp = tmp + "       " + "[" + (lines.Length-a).ToString() + ".." + "65535" + "]" + " : " + "11111000000000000000000000000000;\n";
+            tmp = tmp + "END;";
+            string path2 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\ROM.mif");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(path2);
+            file.WriteLine(tmp);
+            file.Close();
+        }
+
+        public string convert(string token)
+        {
+            string tmp = "";
+            if (_instructions_type1.Contains(token.ToLower()))
+            {
+                int index = _instructions_type1.IndexOf(token.ToLower());
+                tmp = _codes_type1[index];
             }
-            else if (tmp.Length == 2)
+            else if (_instructions_type2.Contains(token.ToLower()))
             {
-                tmp = "00" + tmp;
+                int index = _instructions_type2.IndexOf(token.ToLower());
+                tmp = _codes_type2[index];
             }
-            else if (tmp.Length == 3)
+            else if (_registers.Contains(token.ToLower()))
             {
-                tmp = "0" + tmp;
+                int index = _registers.IndexOf(token.ToLower());
+                tmp =  _codes_registers[index];
+            }
+            else if (_labels.Contains(token))
+            {
+                int index = _labels.IndexOf(token);
+                string lb = Convert.ToString(_labels_mem[index], 2);
+                string binValue = lb.PadLeft(17, '0');
+                tmp =  binValue;
+            }
+            else if (token.Contains(")"))
+            {
+                string binValue = Convert.ToString(Int32.Parse(token.Trim('(', ')')), 2);
+                binValue = binValue.PadLeft(17, '0');
+                tmp =  binValue;
+            }
+            else
+            {
+                tmp = "XXXXX";
+            }
+            return tmp;
+        }
+
+
+        public int check_nops(int i)
+        {
+            int a = 0;
+            if(_tokens[i].Count == 1)
+            {
+                a = 0;
             }
             else
             {
                 
-            }
-            return tmp.ToUpper();
-        }
+                if(_tokens[i][0].ToLower() == "add" || _tokens[i][0].ToLower() == "sub" || _tokens[i][0].ToLower() == "cmp" || _tokens[i][0].ToLower() == "and" ||
+                     _tokens[i][0].ToLower() == "or" || _tokens[i][0].ToLower() == "mult" || _tokens[i][0].ToLower() == "not" || _tokens[i][0].ToLower() == "xor" ||
+                     _tokens[i][0].ToLower() == "lb" || _tokens[i][0].ToLower() == "mov" || _tokens[i][0].ToLower() == "sll" || _tokens[i][0].ToLower() == "srl" 
+                     || _tokens[i][0].ToLower() == "addi" || _tokens[i][0].ToLower() == "subi" || _tokens[i][0].ToLower() == "cmpi" || _tokens[i][0].ToLower() == "lbi"||
+                     _tokens[i][0].ToLower() == "movi")
+                {
+                    if (i + 1 < _tokens.Count)
+                    {
+                        if (_tokens[i+1][0].ToLower() == "add" || _tokens[i+1][0].ToLower() == "sub" || _tokens[i+1][0].ToLower() == "cmp" || _tokens[i+1][0].ToLower() == "and" ||
+                            _tokens[i+1][0].ToLower() == "or" || _tokens[i+1][0].ToLower() == "mult"  || _tokens[i+1][0].ToLower() == "xor" 
+                            || _tokens[i+1][0].ToLower() == "sll" || _tokens[i+1][0].ToLower() == "srl")
+                        {
+                            if (_tokens[i][1] == _tokens[i+1][2] || _tokens[i][1] == _tokens[i + 1][3])
+                            {
+                                a = 3;
+                            }
 
-        public string CalculateChecksum(string data)
-        {
-            int checksum = 0;
-            Console.WriteLine("Data: " + data);
-            for (int i =0; i < (data.Length); i=i+2)
-            {
-                string tmp = data.Substring(i,2);
-                
-                int value= int.Parse(tmp, System.Globalization.NumberStyles.HexNumber);
-                checksum += value;
-                
-           
-            }
-            int complemento = (int)Math.Pow(10, checksum.ToString().Length) - checksum;
-            string check = dec_to_hex(complemento);
-            return check.Substring(check.Length - 2);
-        }
+                        }
+                        else if (_tokens[i + 1][0].ToLower() == "lb" || _tokens[i + 1][0].ToLower() == "mov" || _tokens[i + 1][0].ToLower() == "addi"
+                            || _tokens[i + 1][0].ToLower() == "subi" || _tokens[i + 1][0].ToLower() == "cmpi")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 1][2] )
+                            {
+                                a = 3;
+                            }
+                        }
+                        else if (_tokens[i + 1][0].ToLower() == "not")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 1][1])
+                            {
+                                a = 3;
+                            }
+                        }
+                    }
+                    if (i + 2 < _tokens.Count && a ==0)
+                    {
+                        if (_tokens[i + 2][0].ToLower() == "add" || _tokens[i + 2][0].ToLower() == "sub" || _tokens[i + 2][0].ToLower() == "cmp" || _tokens[i + 2][0].ToLower() == "and" ||
+                            _tokens[i + 2][0].ToLower() == "or" || _tokens[i + 2][0].ToLower() == "mult" || _tokens[i + 2][0].ToLower() == "xor"
+                            || _tokens[i + 2][0].ToLower() == "sll" || _tokens[i + 2][0].ToLower() == "srl")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 2][2] || _tokens[i][1] == _tokens[i + 2][3])
+                            {
+                                a = 2;
+                            }
 
-      
+                        }
+                        else if (_tokens[i + 2][0].ToLower() == "lb" || _tokens[i + 2][0].ToLower() == "mov" || _tokens[i + 2][0].ToLower() == "addi"
+                            || _tokens[i + 2][0].ToLower() == "subi" || _tokens[i + 2][0].ToLower() == "cmpi")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 2][2])
+                            {
+                                a = 2;
+                            }
+                        }
+                        else if (_tokens[i + 2][0].ToLower() == "not")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 2][1])
+                            {
+                                a = 2;
+                            }
+                        }
+                    }
+                    if (i + 3 < _tokens.Count && a == 0)
+                    {
+                        if (_tokens[i + 3][0].ToLower() == "add" || _tokens[i + 3][0].ToLower() == "sub" || _tokens[i + 3][0].ToLower() == "cmp" || _tokens[i + 3][0].ToLower() == "and" ||
+                            _tokens[i + 3][0].ToLower() == "or" || _tokens[i + 3][0].ToLower() == "mult" || _tokens[i + 3][0].ToLower() == "xor"
+                            || _tokens[i + 3][0].ToLower() == "sll" || _tokens[i + 3][0].ToLower() == "srl")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 3][2] || _tokens[i][1] == _tokens[i + 3][3])
+                            {
+                                a = 1;
+                            }
+
+                        }
+                        else if (_tokens[i + 3][0].ToLower() == "lb" || _tokens[i + 3][0].ToLower() == "mov" || _tokens[i + 3][0].ToLower() == "addi"
+                            || _tokens[i + 3][0].ToLower() == "subi" || _tokens[i + 3][0].ToLower() == "cmpi")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 3][2])
+                            {
+                                a = 1;
+                            }
+                        }
+                        else if (_tokens[i + 3][0].ToLower() == "not")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 3][1])
+                            {
+                                a = 1;
+                            }
+                        }
+                    }
+                }
+            }
+            return a;
+        }
 
     }
+
+    
 }
