@@ -1,10 +1,10 @@
-addi R1, R1, 12 
+addi R1, R1, (12) 
 
 inicio:
 	
-	addi R3, R3, (0)
+	addi R3, R3, (0) #Offset de memoria
 	
-	addi R4, R4 (350000)
+	addi R4, R4 (35000)
 	addi R22, R22, (220)
 	
 	mult R4, R4, R22

@@ -87,7 +87,7 @@ namespace Compilador
                         }
                         else
                         {
-                            tmp2.Add(tmp[j].ToLower());
+                            tmp2.Add(tmp[j]);
                         }
                     }
                     if (tmp2.Count == 0)
@@ -109,7 +109,7 @@ namespace Compilador
                 string tmp = "|";
                 for (int y = 0; y < _tokens[x].Count; y++)
                 {
-                    tmp = tmp + _tokens[x][y].ToLower() + "|";
+                    tmp = tmp + _tokens[x][y] + "|";
                 }
 
                 file.WriteLine(tmp);
@@ -171,7 +171,7 @@ namespace Compilador
                             b.Add("nop");
                             _tokens.Insert(i+1, b);
                             _tokens.Insert(i+2, b);
-                            _tokens.Insert(i+3, b);
+                           
                         }
                         else if (_tokens[i][0].ToLower() == "bne" || _tokens[i][0].ToLower() == "beq")
                         {
@@ -180,7 +180,7 @@ namespace Compilador
                             b.Add("nop");
                             _tokens.Insert(i + 1, b);
                             _tokens.Insert(i + 2, b);
-                            _tokens.Insert(i + 3, b);
+                          
                         }
                         else
                         {
@@ -424,6 +424,7 @@ namespace Compilador
         public int check_nops(int i)
         {
             int a = 0;
+            int b = 0;
             if(_tokens[i].Count == 1)
             {
                 a = 0;
@@ -445,7 +446,7 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i+1][2] || _tokens[i][1] == _tokens[i + 1][3])
                             {
-                                a = 3;
+                                a = 3 + b;
                             }
 
                         }
@@ -454,17 +455,29 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i + 1][2] )
                             {
-                                a = 3;
+                                a = 3 + b;
                             }
                         }
                         else if (_tokens[i + 1][0].ToLower() == "not")
                         {
                             if (_tokens[i][1] == _tokens[i + 1][1])
                             {
-                                a = 3;
+                                a = 3 + b;
                             }
                         }
+                        else if (_tokens[i + 1][0].ToLower() == "beq" || _tokens[i + 1][0].ToLower() == "bne")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 1][1] || _tokens[i][1] == _tokens[i + 1][2])
+                            {
+                                a = 3 + b;
+                            }
+                        }
+                        else if ((_tokens[i + 2][0].EndsWith(":")))
+                        {
+                            b = b + 1;
+                        }
                     }
+                   
                     if (i + 2 < _tokens.Count && a ==0)
                     {
                         if (_tokens[i + 2][0].ToLower() == "add" || _tokens[i + 2][0].ToLower() == "sub" || _tokens[i + 2][0].ToLower() == "cmp" || _tokens[i + 2][0].ToLower() == "and" ||
@@ -473,7 +486,7 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i + 2][2] || _tokens[i][1] == _tokens[i + 2][3])
                             {
-                                a = 2;
+                                a = 2 + b;
                             }
 
                         }
@@ -482,17 +495,29 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i + 2][2])
                             {
-                                a = 2;
+                                a = 2 + b;
                             }
                         }
                         else if (_tokens[i + 2][0].ToLower() == "not")
                         {
                             if (_tokens[i][1] == _tokens[i + 2][1])
                             {
-                                a = 2;
+                                a = 2 + b ;
                             }
                         }
+                        else if (_tokens[i + 2][0].ToLower() == "beq" || _tokens[i + 2][0].ToLower() == "bne")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 2][1] || _tokens[i][1] == _tokens[i + 2][2])
+                            {
+                                a = 2 + b;
+                            }
+                        }
+                        else if (_tokens[i + 2][0].EndsWith(":"))
+                        {
+                            b = b + 1;
+                        }
                     }
+                    
                     if (i + 3 < _tokens.Count && a == 0)
                     {
                         if (_tokens[i + 3][0].ToLower() == "add" || _tokens[i + 3][0].ToLower() == "sub" || _tokens[i + 3][0].ToLower() == "cmp" || _tokens[i + 3][0].ToLower() == "and" ||
@@ -501,7 +526,7 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i + 3][2] || _tokens[i][1] == _tokens[i + 3][3])
                             {
-                                a = 1;
+                                a = 1 + b ;
                             }
 
                         }
@@ -510,20 +535,67 @@ namespace Compilador
                         {
                             if (_tokens[i][1] == _tokens[i + 3][2])
                             {
-                                a = 1;
+                                a = 1 + b;
                             }
                         }
                         else if (_tokens[i + 3][0].ToLower() == "not")
                         {
                             if (_tokens[i][1] == _tokens[i + 3][1])
                             {
-                                a = 1;
+                                a = 1 + b;
+                            }
+                        }
+                        else if (_tokens[i + 3][0].ToLower() == "beq" || _tokens[i + 3][0].ToLower() == "bne")
+                        {
+                            if (_tokens[i][1] == _tokens[i + 3][1] || _tokens[i][1] == _tokens[i + 3][2])
+                            {
+                                a = 1 +b;
+                            }
+                        }
+                        else if ((_tokens[i + 3][0].EndsWith(":")))
+                        {
+                            b = b + 1;
+                            if (i + 4 < _tokens.Count && a == 0)
+                            {
+                                if (_tokens[i + 4][0].ToLower() == "add" || _tokens[i + 4][0].ToLower() == "sub" || _tokens[i + 4][0].ToLower() == "cmp" || _tokens[i + 4][0].ToLower() == "and" ||
+                                    _tokens[i + 4][0].ToLower() == "or" || _tokens[i + 4][0].ToLower() == "mult" || _tokens[i + 4][0].ToLower() == "xor"
+                                    || _tokens[i + 4][0].ToLower() == "sll" || _tokens[i + 4][0].ToLower() == "srl")
+                                {
+                                    if (_tokens[i][1] == _tokens[i + 4][2] || _tokens[i][1] == _tokens[i + 4][3])
+                                    {
+                                        a = 1 + b;
+                                    }
+
+                                }
+                                else if (_tokens[i + 4][0].ToLower() == "lb" || _tokens[i + 4][0].ToLower() == "mov" || _tokens[i + 4][0].ToLower() == "addi"
+                                    || _tokens[i + 4][0].ToLower() == "subi" || _tokens[i + 4][0].ToLower() == "cmpi")
+                                {
+                                    if (_tokens[i][1] == _tokens[i + 4][2])
+                                    {
+                                        a = 1 + b;
+                                    }
+                                }
+                                else if (_tokens[i + 4][0].ToLower() == "not")
+                                {
+                                    if (_tokens[i][1] == _tokens[i + 4][1])
+                                    {
+                                        a = 1 + b;
+                                    }
+                                }
+                                else if (_tokens[i + 4][0].ToLower() == "beq" || _tokens[i + 4][0].ToLower() == "bne")
+                                {
+                                    if (_tokens[i][1] == _tokens[i + 4][1] || _tokens[i][1] == _tokens[i + 4][2])
+                                    {
+                                        a = 1 + b;
+                                    }
+                                }
                             }
                         }
                     }
+                    
                 }
             }
-            return a;
+            return a ;
         }
 
     }
