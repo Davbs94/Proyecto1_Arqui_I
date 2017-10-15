@@ -337,7 +337,7 @@ namespace Compilador
                     {
                         tmp = tmp + convert(_tokens[i][0]) + convert(_tokens[i][1]) + "00000" + convert(_tokens[i][2]) + "\n";
                     }
-                    else if (opcode == "11111")
+                    else if (opcode == "10111")
                     {
                         tmp = tmp + convert(_tokens[i][0]) + "000000000000000000000000000" + "\n";
                     }
@@ -472,7 +472,7 @@ namespace Compilador
                                 a = 3 + b;
                             }
                         }
-                        else if ((_tokens[i + 2][0].EndsWith(":")))
+                        else if ((_tokens[i + 1][0].EndsWith(":")))
                         {
                             b = b + 1;
                         }
