@@ -130,7 +130,14 @@ namespace Compilador
                 }
                 else if (_instructions_type1.Contains(_tokens[i][0])||_instructions_type2.Contains(_tokens[i][0]))
                 {
-                    if (_instructions_type1.Contains(_tokens[i][0]))
+                    if (_tokens[i][0].ToLower() == "cmp")
+                    {
+                        List<string> b = new List<string>();
+                        b.Add("nop");
+                        _tokens.Insert(i + 1, b);
+                        _tokens.Insert(i + 2, b);
+                    }
+                    else if (_instructions_type1.Contains(_tokens[i][0]))
                     {
                         int a = check_nops(i);
                         Console.WriteLine(a);
@@ -161,9 +168,15 @@ namespace Compilador
                     }
                     else if (_instructions_type2.Contains(_tokens[i][0]))
                     {
-
+                        if (_tokens[i][0].ToLower() == "cmpi")
+                        {
+                            List<string> b = new List<string>();
+                            b.Add("nop");
+                            _tokens.Insert(i + 1, b);
+                            _tokens.Insert(i + 2, b);
+                        }
                         // sintax_instruction_type2(_tokens[i]);
-                        if (_tokens[i][0].ToLower() == "j")
+                        else if (_tokens[i][0].ToLower() == "j")
                         {
                             
                             
@@ -374,7 +387,7 @@ namespace Compilador
                     tmp = tmp + "       " + i.ToString() + " : " + lines[i] + ";\n";
                 }             
             };
-            tmp = tmp + "       " + "[" + (lines.Length-a).ToString() + ".." + "65535" + "]" + " : " + "11111000000000000000000000000000;\n";
+            tmp = tmp + "       " + "[" + (lines.Length-a).ToString() + ".." + "65535" + "]" + " : " + "10111000000000000000000000000000;\n";
             tmp = tmp + "END;";
             string path2 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\ROM.mif");
             System.IO.StreamWriter file = new System.IO.StreamWriter(path2);
