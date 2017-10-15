@@ -1,5 +1,5 @@
 Assembler report for Process1
-Thu Oct 12 21:26:08 2017
+Sat Oct 14 20:50:03 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Oct 12 21:26:08 2017 ;
+; Assembler Status      ; Successful - Sat Oct 14 20:50:03 2017 ;
 ; Revision Name         ; Process1                              ;
 ; Top-level Entity Name ; Tester                                ;
 ; Family                ; Cyclone V                             ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                                                                  ;
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; 5CSEMA5F31C6                                                             ;
-; JTAG usercode  ; 0x05650CB3                                                               ;
-; Checksum       ; 0x05650CB3                                                               ;
+; JTAG usercode  ; 0x05759F01                                                               ;
+; Checksum       ; 0x05759F01                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Oct 12 21:25:48 2017
+    Info: Processing started: Sat Oct 14 20:49:41 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Process1 -c Process1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 769 megabytes
-    Info: Processing ended: Thu Oct 12 21:26:08 2017
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 778 megabytes
+    Info: Processing ended: Sat Oct 14 20:50:03 2017
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:19
 
 

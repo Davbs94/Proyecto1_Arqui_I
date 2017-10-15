@@ -1,4 +1,4 @@
-/**module CPU(
+module CPU(
 	input wire clk,
 	
 	output wire [31:0]reg0,
@@ -267,7 +267,6 @@ assign reg24 = D24REG;
 assign reg25 = D25REG;
 						
 endmodule
-*/
 
 
 
@@ -277,6 +276,7 @@ endmodule
 
 
 
+/**
 module CPU(
 	input wire clk,
 	
@@ -285,7 +285,7 @@ module CPU(
 	output wire [31:0]reg2,
 	output wire [31:0]reg3,
 	output wire [31:0]reg4,
-	/*output wire [31:0]reg5,
+	output wire [31:0]reg5,
 	output wire [31:0]reg6,
 	output wire [31:0]reg7,
 	output wire [31:0]reg8,
@@ -305,7 +305,7 @@ module CPU(
 	output wire [31:0]reg22,
 	output wire [31:0]reg23,
 	output wire [31:0]reg24,
-	output wire [31:0]reg25,*/
+	output wire [31:0]reg25,
 	//---MUXDIRECCION-
 	output wire crtlMuxDireccionPC,
 	//---MEMINTRUC----
@@ -379,7 +379,7 @@ wire crtlMuxDirB;
 wire [4:0] DirRegB;
 //----ModEspecial--
 //wire ModEsp;
-wire [2:0] CodigoALU;
+wire [3:0] CodigoALU;
 wire [1:0] MuxResult;
 wire MuxDirWrite;
 wire MuxDirMem;
@@ -388,7 +388,7 @@ wire WriteMem;
 wire WriteReg;
 
 //wire ModEspOUT;
-wire [2:0] CodigoALUDEOUT;
+wire [3:0] CodigoALUDEOUT;
 wire [1:0] MuxResultDEOUT;
 wire MuxDirWriteDEOUT;
 wire MuxDirMemDEOUT;
@@ -546,3 +546,4 @@ assign reg24 = D24REG;
 assign reg25 = D25REG;
 						
 endmodule
+*/

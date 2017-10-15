@@ -1,7 +1,7 @@
 module PipeDE(
     input clk,
     //input ModEspIN,
-	 input [2:0] CodigoALUIN,
+	 input [3:0] CodigoALUIN,
 	 input [1:0] MuxResultIN,
 	 input MuxDirWriteIN,
 	 input MuxDirMemIN,

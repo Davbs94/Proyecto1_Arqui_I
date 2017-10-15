@@ -6,7 +6,7 @@ module ControlUnit(
 	 output reg MuxSelDirRegB,
 	 output reg crtlMuxValA,
 	 output reg crtlMuxValB,
-	 output reg [2:0] CodigoALUIN,
+	 output reg [3:0] CodigoALUIN,
 	 output reg [1:0] MuxResultIN,
 	 output reg MuxDirWriteIN,
 	 output reg MuxDirMemIN,
@@ -20,7 +20,7 @@ initial begin
 	 MuxSelDirRegB <= 0;
 	 crtlMuxValA <= 0;
 	 crtlMuxValB <= 0;
-	 CodigoALUIN <= 3'b000;
+	 CodigoALUIN <= 4'b0000;
 	 MuxResultIN <= 2'b00;
 	 MuxDirWriteIN <= 0;
 	 MuxDirMemIN <= 1;
@@ -38,7 +38,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b011;
+		 CodigoALUIN <= 4'b0011;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -53,7 +53,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 1;
-		 CodigoALUIN <= 3'b011;
+		 CodigoALUIN <= 4'b0011;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -68,7 +68,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b100;
+		 CodigoALUIN <= 4'b0100;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -83,7 +83,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 1;
-		 CodigoALUIN <= 3'b100;
+		 CodigoALUIN <= 4'b0100;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -98,7 +98,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b101;
+		 CodigoALUIN <= 4'b0101;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -113,7 +113,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 1;
-		 CodigoALUIN <= 3'b101;
+		 CodigoALUIN <= 4'b0101;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -128,7 +128,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -143,7 +143,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b001;
+		 CodigoALUIN <= 4'b0001;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -158,7 +158,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b110;
+		 CodigoALUIN <= 4'b0110;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -173,7 +173,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b010;
+		 CodigoALUIN <= 3'b0010;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -188,7 +188,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b11;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 0;
@@ -203,7 +203,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 1;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b11;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 0;
@@ -219,7 +219,7 @@ begin
 		 MuxSelDirRegB <= 1;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -234,7 +234,7 @@ begin
 		 MuxSelDirRegB <= 1;
 		 crtlMuxValA <= 1;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -249,7 +249,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -264,7 +264,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 1;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -279,7 +279,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b111;
+		 CodigoALUIN <= 4'b0111;
 		 MuxResultIN <= 2'b10;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
@@ -294,7 +294,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 0;
@@ -309,7 +309,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 0;
@@ -324,7 +324,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b00;
 		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 0;
@@ -341,7 +341,7 @@ begin
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
-			CodigoALUIN <= 3'b000;
+			CodigoALUIN <= 4'b0000;
 			MuxResultIN <= 2'b11;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
@@ -355,7 +355,7 @@ begin
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
-			CodigoALUIN <= 3'b000;
+			CodigoALUIN <= 4'b0000;
 			MuxResultIN <= 2'b00;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
@@ -373,7 +373,7 @@ begin
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
-			CodigoALUIN <= 3'b000;
+			CodigoALUIN <= 4'b0000;
 			MuxResultIN <= 2'b00;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
@@ -387,7 +387,7 @@ begin
 			MuxSelDirRegB <= 0;
 			crtlMuxValA <= 0;
 			crtlMuxValB <= 0;
-			CodigoALUIN <= 3'b000;
+			CodigoALUIN <= 4'b0000;
 			MuxResultIN <= 2'b11;
 			MuxDirWriteIN <= 0;
 			MuxDirMemIN <= 0;
@@ -403,7 +403,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b110;
+		 CodigoALUIN <= 4'b1000;
 		 MuxResultIN <= 2'b01;
 		 MuxDirWriteIN <= 1;
 		 MuxDirMemIN <= 1;
@@ -418,7 +418,7 @@ begin
 		 MuxSelDirRegB <= 0;
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
-		 CodigoALUIN <= 3'b000;
+		 CodigoALUIN <= 4'b0000;
 		 MuxResultIN <= 2'b11;
 		 MuxDirWriteIN <= 1;
 		 MuxDirMemIN <= 1;

@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Process1 -c Process1 --vector_source="C:/Users/jairo-mm/Documents/Proyecto1/Waveform1.vwf" --testbench_file="C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Waveform1.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Process1 -c Process1 --vector_source="C:/Users/jairo-mm/Documents/Proyecto1/Waveform3.vwf" --testbench_file="C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Waveform3.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,12 +26,18 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 14 12:52:58 2017
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Process1 -c Process1 --vector_source=C:/Users/jairo-mm/Documents/Proyecto1/Waveform1.vwf --testbench_file=C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Waveform1.vwf.vt
+    Info: Processing started: Sat Oct 14 19:41:24 2017
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Process1 -c Process1 --vector_source=C:/Users/jairo-mm/Documents/Proyecto1/Waveform3.vwf --testbench_file=C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Waveform3.vwf.vt
 Info (119006): Selected device 5CSEMA5F31C6 for design "Process1"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-ut pin "reg4[17]" in vector source file when writing test bench files
+es
+Info (201000): Generated Verilog Test Bench File C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Waveform3.vwf.vt for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 605 megabytes
+    Info: Processing ended: Sat Oct 14 19:41:25 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -58,16 +64,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 14 12:53:01 2017
+    Info: Processing started: Sat Oct 14 19:41:25 2017
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/ Process1 -c Process1
 Info (119006): Selected device 5CSEMA5F31C6 for design "Process1"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Process1.vo in folder "C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 619 megabytes
-    Info: Processing ended: Sat Oct 14 12:53:03 2017
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 613 megabytes
+    Info: Processing ended: Sat Oct 14 19:41:26 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -83,114 +89,54 @@ c:/intelfpga_lite/16.1/modelsim_ase/win32aloem//vsim -c -do Process1.do
 
 Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
 
 # do Process1.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:53:07 on Oct 14,2017
+# Start time: 19:41:27 on Oct 14,2017
 # vlog -work work Process1.vo 
-
-# -- Compiling module CPU
+# -- Compiling module seven_segments
 
 # 
 # Top level modules:
-# 	CPU
-# End time: 12:53:08 on Oct 14,2017, Elapsed time: 0:00:01
+# 	seven_segments
+# End time: 19:41:28 on Oct 14,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:53:08 on Oct 14,2017
-# vlog -work work Waveform1.vwf.vt 
-
-# -- Compiling module CPU_vlg_vec_tst
+# Start time: 19:41:28 on Oct 14,2017
+# vlog -work work Waveform3.vwf.vt 
+# -- Compiling module seven_segments_vlg_vec_tst
 # 
 # Top level modules:
-# 	CPU_vlg_vec_tst
-# End time: 12:53:08 on Oct 14,2017, Elapsed time: 0:00:00
+# 	seven_segments_vlg_vec_tst
+# End time: 19:41:28 on Oct 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 12:53:10 on Oct 14,2017
-# Loading work.CPU_vlg_vec_tst
-# Loading work.CPU
-# Loading sv_std.std
-# Loading altera_lnsim_ver.generic_m10k
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.common_28nm_ram_block
-# Loading altera_lnsim_ver.common_28nm_ram_register
-# Loading altera_lnsim_ver.common_28nm_ram_pulse_generator
-# Loading altera_ver.dffeas
-# Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(32186): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~20  File: nofile
-# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
-#    Time: 0 ps  Iteration: 0  Protected: /CPU_vlg_vec_tst/i1/\alu|Mult0~20 // File: nofile
-# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
-#    Time: 0 ps  Iteration: 0  Protected: /CPU_vlg_vec_tst/i1/\alu|Mult0~20 // File: nofile
-# ** Warning: (vsim-3015) Process1.vo(55724): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~405  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(55724): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~405  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(55724): [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~405  File: nofile
-# ** Warning: (vsim-3015) Process1.vo(55724): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_vec_tst/i1/\alu|Mult0~405  File: nofile
-# ** Warning: Design size of 21098 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.seven_segments_vlg_vec_tst 
+# Start time: 19:41:28 on Oct 14,2017
+# Loading work.seven_segments_vlg_vec_tst
+# Loading work.seven_segments
 # after#25
+# ** Note: $finish    : Waveform3.vwf.vt(45)
+#    Time: 100 us  Iteration: 0  Instance: /seven_segments_vlg_vec_tst
 
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# Simulation time: 0 ps
-
-# ** Note: $finish    : Waveform1.vwf.vt(79)
-#    Time: 100 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
-# End time: 12:53:43 on Oct 14,2017, Elapsed time: 0:00:33
-# Errors: 0, Warnings: 13
+# End time: 19:41:28 on Oct 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/jairo-mm/Documents/Proyecto1/Waveform1.vwf...
+Reading C:/Users/jairo-mm/Documents/Proyecto1/Waveform3.vwf...
 
 Reading C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Process1.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Process1_20171014125343.sim.vwf
+Writing the resulting VWF to C:/Users/jairo-mm/Documents/Proyecto1/simulation/qsim/Process1_20171014194128.sim.vwf
 
 Finished VCD to VWF conversion.
 

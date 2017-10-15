@@ -19,72 +19,194 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/13/2017 16:24:51"
+// Generated on "10/14/2017 19:41:24"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          CPU
+// Verilog Test Bench (with test vectors) for design :                          seven_segments
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module CPU_vlg_vec_tst();
+module seven_segments_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg clk;
+reg [31:0] num;
 // wires                                               
-wire [31:0] DatoMWBOUT;
-wire [4:0] DirRegAIFDOUT;
-wire [4:0] DirRegBIFDOUT;
-wire [4:0] DirWriteIFDOUT;
-wire [4:0] DirWriteMWBOUT;
-wire [31:0] DireccionIFDOUT;
-wire [31:0] InmCorrimIFDOUT;
-wire [4:0] OpCodeIFDOUT;
-wire WriteRegMWBOUT;
-wire crtlMuxDireccionPC;
-wire [31:0] inst;
-wire [31:0] newpc;
-wire [31:0] pcout;
-wire [31:0] reg0;
-wire [31:0] reg1;
-wire [31:0] reg2;
-wire [31:0] reg3;
-wire [31:0] reg4;
+wire [20:0] seven_Segs;
 
 // assign statements (if any)                          
-CPU i1 (
+seven_segments i1 (
 // port map - connection between master ports and signals/registers   
-	.DatoMWBOUT(DatoMWBOUT),
-	.DirRegAIFDOUT(DirRegAIFDOUT),
-	.DirRegBIFDOUT(DirRegBIFDOUT),
-	.DirWriteIFDOUT(DirWriteIFDOUT),
-	.DirWriteMWBOUT(DirWriteMWBOUT),
-	.DireccionIFDOUT(DireccionIFDOUT),
-	.InmCorrimIFDOUT(InmCorrimIFDOUT),
-	.OpCodeIFDOUT(OpCodeIFDOUT),
-	.WriteRegMWBOUT(WriteRegMWBOUT),
-	.clk(clk),
-	.crtlMuxDireccionPC(crtlMuxDireccionPC),
-	.inst(inst),
-	.newpc(newpc),
-	.pcout(pcout),
-	.reg0(reg0),
-	.reg1(reg1),
-	.reg2(reg2),
-	.reg3(reg3),
-	.reg4(reg4)
+	.num(num),
+	.seven_Segs(seven_Segs)
 );
 initial 
 begin 
 #100000000 $finish;
 end 
-
-// clk
+// num[ 31 ]
+initial
+begin
+	num[31] = 1'b0;
+end 
+// num[ 30 ]
+initial
+begin
+	num[30] = 1'b0;
+end 
+// num[ 29 ]
+initial
+begin
+	num[29] = 1'b0;
+end 
+// num[ 28 ]
+initial
+begin
+	num[28] = 1'b0;
+end 
+// num[ 27 ]
+initial
+begin
+	num[27] = 1'b0;
+end 
+// num[ 26 ]
+initial
+begin
+	num[26] = 1'b0;
+end 
+// num[ 25 ]
+initial
+begin
+	num[25] = 1'b0;
+end 
+// num[ 24 ]
+initial
+begin
+	num[24] = 1'b0;
+end 
+// num[ 23 ]
+initial
+begin
+	num[23] = 1'b0;
+end 
+// num[ 22 ]
+initial
+begin
+	num[22] = 1'b0;
+end 
+// num[ 21 ]
+initial
+begin
+	num[21] = 1'b0;
+end 
+// num[ 20 ]
+initial
+begin
+	num[20] = 1'b0;
+end 
+// num[ 19 ]
+initial
+begin
+	num[19] = 1'b0;
+end 
+// num[ 18 ]
+initial
+begin
+	num[18] = 1'b0;
+end 
+// num[ 17 ]
+initial
+begin
+	num[17] = 1'b0;
+end 
+// num[ 16 ]
+initial
+begin
+	num[16] = 1'b0;
+end 
+// num[ 15 ]
+initial
+begin
+	num[15] = 1'b0;
+end 
+// num[ 14 ]
+initial
+begin
+	num[14] = 1'b0;
+end 
+// num[ 13 ]
+initial
+begin
+	num[13] = 1'b0;
+end 
+// num[ 12 ]
+initial
+begin
+	num[12] = 1'b0;
+end 
+// num[ 11 ]
+initial
+begin
+	num[11] = 1'b0;
+end 
+// num[ 10 ]
+initial
+begin
+	num[10] = 1'b0;
+end 
+// num[ 9 ]
+initial
+begin
+	num[9] = 1'b0;
+end 
+// num[ 8 ]
+initial
+begin
+	num[8] = 1'b0;
+end 
+// num[ 7 ]
+initial
+begin
+	num[7] = 1'b0;
+end 
+// num[ 6 ]
+initial
+begin
+	num[6] = 1'b0;
+end 
+// num[ 5 ]
+initial
+begin
+	num[5] = 1'b0;
+end 
+// num[ 4 ]
+initial
+begin
+	num[4] = 1'b0;
+end 
+// num[ 3 ]
+initial
+begin
+	num[3] = 1'b0;
+end 
+// num[ 2 ]
+initial
+begin
+	num[2] = 1'b0;
+end 
+// num[ 1 ]
 always
 begin
-	clk = 1'b0;
-	clk = #2500000 1'b1;
-	#2500000;
+	num[1] = 1'b0;
+	num[1] = #50000000 1'b1;
+	#50000000;
+end 
+// num[ 0 ]
+always
+begin
+	num[0] = 1'b0;
+	num[0] = #25000000 1'b1;
+	#25000000;
 end 
 endmodule
 

@@ -1,2 +1,3 @@
-Info (10281): Verilog HDL Declaration information at CPU.v(385): object "MuxDirMem" differs only in case from object "muxDirMem" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 385
-Info (10281): Verilog HDL Declaration information at CPU.v(386): object "MuxDato" differs only in case from object "muxDato" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 386
+Info (10281): Verilog HDL Declaration information at CPU.v(106): object "MuxDirMem" differs only in case from object "muxDirMem" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 106
+Info (10281): Verilog HDL Declaration information at CPU.v(107): object "MuxDato" differs only in case from object "muxDato" in the same scope File: C:/Users/jairo-mm/Documents/Proyecto1/CPU.v Line: 107
+Warning (10268): Verilog HDL information at seven_segments.v(9): always construct contains both blocking and non-blocking assignments File: C:/Users/jairo-mm/Documents/Proyecto1/output_files/seven_segments.v Line: 9
