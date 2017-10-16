@@ -1,14 +1,14 @@
-addi R1, R1 (0) #int a = 0;
-addi R2, R2 (1) #int b = 1;
-addi R3, R3 (0) # i = 0
-addi R4, R4 (4) # Se define "n", numero de iteraciones
+addi $1, $1 (0) #int a = 0;
+addi $2, $2 (1) #int b = 1;
+addi $3, $3 (0) # i = 0
+addi $4, $4 (8) # Se define "n", nume$o de iteraciones
 
 Loop:
-	cmp   R17, R4, R3
-	beq   R4, R3, fin
-	addi  R5, R1, (0)
-	addi  R1, R2, (0)
-	add   R2, R5, R2
-	addi  R3, R3 (1)
+	cmp   $17, $4, $3
+	beq   $4, $3, fin
+	addi  $5, $1, (0)
+	addi  $1, $2, (0)
+	add   $2, $5, $2
+	addi  $3, $3 (1)
 	j Loop
 fin:

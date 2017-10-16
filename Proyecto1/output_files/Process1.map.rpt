@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Process1
-Sun Oct 15 02:42:58 2017
+Mon Oct 16 03:39:04 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 15 02:42:58 2017       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 16 03:39:04 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Process1                                    ;
 ; Top-level Entity Name           ; Tester                                      ;
@@ -1029,7 +1029,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port            ; Type   ; Severity ; Details                                                                             ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; reg0            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; reg1            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reg2            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg3            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg4            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg5            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1102,7 +1102,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1112,7 +1112,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Oct 15 02:42:40 2017
+    Info: Processing started: Mon Oct 16 03:38:49 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Process1 -c Process1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1592,19 +1592,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_sve File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/db/alt_u_div_sve.tdf Line: 23
 Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[0] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[1] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[2] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[3] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[4] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[5] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[6] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[2][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[1][1] File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[7] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
     Warning (13013): Ports D and ENA on the latch are fed by the same signal seven_segments:sevenSegs1|lpm_divide:Mod2|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider|StageOut[156]~synth File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/db/alt_u_div_mve.tdf Line: 203
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[8] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Proyecto1/output_files/seven_segments.v Line: 9
@@ -1649,10 +1649,10 @@ Info (21057): Implemented 3679 device resources after synthesis - the final reso
     Info (21061): Implemented 3337 logic cells
     Info (21064): Implemented 320 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 306 warnings
-    Info: Peak virtual memory: 785 megabytes
-    Info: Processing ended: Sun Oct 15 02:42:58 2017
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 781 megabytes
+    Info: Processing ended: Mon Oct 16 03:39:04 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

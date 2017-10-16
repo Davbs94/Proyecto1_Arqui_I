@@ -1,26 +1,26 @@
 |Tester
 clk => clk.IN1
-led_Reg[0] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[1] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[2] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[3] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[4] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[5] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[6] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[7] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[8] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[9] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[10] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[11] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[12] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[13] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[14] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[15] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[16] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[17] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[18] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[19] << seven_segments:sevenSegs1.seven_Segs
-led_Reg[20] << seven_segments:sevenSegs1.seven_Segs
+led_Reg[0] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[1] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[2] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[3] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[4] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[5] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[6] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[7] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[8] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[9] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[10] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[11] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[12] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[13] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[14] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[15] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[16] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[17] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[18] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[19] <= seven_segments:sevenSegs1.seven_Segs
+led_Reg[20] <= seven_segments:sevenSegs1.seven_Segs
 
 
 |Tester|clock_divider:DIV1
