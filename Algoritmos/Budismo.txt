@@ -1,0 +1,41 @@
+addi $5, $5,(45000)
+
+addi $9, $5,(11) 
+
+inicio:
+	addi $10, $0, (0)
+	addi $12, $0, (0)
+	addi $13, $0, (11)
+	addi $14, $14, (60347) 
+	addi $16, $9, (0)
+
+comparacion:	
+	beq $16, $14, final
+	lb $17, $10 
+	lb $15, $16 
+	addi $16, $16, (1)
+	bne $17, $15, reinicia 
+	addi $10, $10, (1) 
+	beq $10, $13, sumar 
+	j comparacion
+
+reinicia:
+	add $10, $0, $0 
+	j comparacion
+	
+sumar:
+	addi $12, $12, (1) 
+	add $10, $0, $0 
+	j comparacion
+	
+final:
+	addi $10, $0, (0)
+	addi $13, $0, (0)
+	addi $14, $0, (0) 
+	addi $9,  $0, (0)
+	addi $16, $0, (0)
+	addi $15, $0, (0)
+	addi $17, $0, (0)
+	addi $5,  $0, (0)
+	j final
+	
