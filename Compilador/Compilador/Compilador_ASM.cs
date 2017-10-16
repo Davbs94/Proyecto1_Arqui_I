@@ -184,7 +184,8 @@ namespace Compilador
                             b.Add("nop");
                             _tokens.Insert(i+1, b);
                             _tokens.Insert(i+2, b);
-                           
+                            _tokens.Insert(i + 2, b);
+
                         }
                         else if (_tokens[i][0].ToLower() == "bne" || _tokens[i][0].ToLower() == "beq")
                         {
@@ -193,7 +194,8 @@ namespace Compilador
                             b.Add("nop");
                             _tokens.Insert(i + 1, b);
                             _tokens.Insert(i + 2, b);
-                          
+                            _tokens.Insert(i + 2, b);
+
                         }
                         else
                         {
