@@ -1,4 +1,20 @@
-﻿using System;
+﻿//I Proyecto CE-4301
+//Autor: David Badilla S.
+//12/10/2017
+//Descripción: Esta clase se encarga de realizar la compilación de un archivo de codigo
+//con un formato definido. La salida del programa será un archivo .mif que ira a la 
+//memoria ROM de un procesador diseñado en verilog
+//
+//
+//
+//
+//
+//
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +25,14 @@ namespace Compilador
 {
     public class Compilador_ASM
     {
-        private string _path;
-        private int _default_pc = 0;
+        private string _path;           //path del archivo a leer
+        private int _default_pc = 0;   //Variable para llevar conteo del PC
         private string _error = "File Compiled!";
         private string _bin_file = "";
         private string _hex_file = "";
 
+
+        //Todas estas listas se utilizan para hacer los analisis sintactico y lexico del archivo
 
         private List<List<string>> _tokens = new List<List<string>>();
 
@@ -35,6 +53,8 @@ namespace Compilador
         private List<string> _labels = new List<string>();
         private List<int> _labels_mem = new List<int>();
 
+
+        //Constructor, se leen y tranforman los archivos de configuracion de las instrucciones y registros
         public Compilador_ASM()
         {
             
@@ -62,12 +82,15 @@ namespace Compilador
 
         }
 
+        //metodo que hace set del path del archivo a compilar
         public void set_path(string path)
         {
             _path = path;
             Console.WriteLine(path);
         }
 
+
+        //meotod que realiza el analisis lexico del archivo, elimina comentarios y divide en tokens
         public void lexico()
         {
             _error = "File Compiled!";
@@ -117,6 +140,8 @@ namespace Compilador
             file.Close();
         }
 
+
+        //Realiza el analisis sintactico, revisa sintaxis y hace un manejo de dependencias, agrega NOPS
         public void sintaxis()
         {
             for (int i = 0; i < _tokens.Count; i++)
@@ -260,6 +285,7 @@ namespace Compilador
             file2.Close();
         }
 
+        //Sintaxis de instrucciones tipo registro
         public bool sintax_instruction_type1(List<string> _instruction)
         {
             if (_instruction.Count != 4)
@@ -282,6 +308,8 @@ namespace Compilador
             }
         }
 
+
+        //Sintaxis de instrucciones tipo inmediato
         public bool sintax_instruction_type2(List<string> _instruction)
         {
             
@@ -318,6 +346,9 @@ namespace Compilador
             return _error;
         }
 
+
+
+        //Metodo encargado de generar el archivo binario de compilacion
         public void  generate_binary()
         {
             string tmp = "";
@@ -372,6 +403,8 @@ namespace Compilador
             file.Close();
         }
 
+
+        //Tranforma el archivo a formato . mif, que ira a la ROM del procesador
         public void generate_mif()
         {
             int a = 0;
@@ -397,6 +430,9 @@ namespace Compilador
             file.Close();
         }
 
+
+
+        //metodo secundario, convierte el token de instruccion y registros a su valor en binario
         public string convert(string token)
         {
             string tmp = "";
@@ -436,6 +472,9 @@ namespace Compilador
         }
 
 
+
+        //Funcion secundaria que realiza el manejo de depnedncias y devuelve el numero de NOPS que deben ser agregados en caso de que sea necesario. Este
+        //meotod lo utiliza el analisis sintactico
         public int check_nops(int i)
         {
             int a = 0;

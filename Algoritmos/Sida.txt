@@ -1,0 +1,118 @@
+inicio:
+	
+	addi $5, $0, (0) #contador de palabras
+	
+	addi $6, $6 (35000)
+	addi $22, $22, (220)
+	
+	mult $6, $6, $22
+	addi $6, $6, (41639)
+		
+	addi $7, $0, (11) #almacena el tamano del patron
+	addi $8, $0, (3) #almacena la base por la cual se multiplica
+	addi $9, $0, (3) #almacena la base por la cual se multiplica (temporal)
+	addi $10, $0, (59049) #guarda el valor de 3**10	
+	subi $13, $7, (1) 
+	
+	addi $14, $0, (45000) #almacena el offset
+	addi $15, $14, (11) #direccion de memoria en la cual se inicial con el offset
+	addi $16,$15, (0) #temporal de la posicion inicial de memoria
+	
+	addi $17, $0, (60325) #tamano del texto
+	sub $17, $17, $14 #se itera tamano texto - offset
+	
+	addi $18, $0, (0) #guarda el hash
+	addi $19, $0, (1)	
+	addi $20, $0, (1)
+
+	
+preHash:
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (59049)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (19683)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (6561)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (2187)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (729)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (243)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (81)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (27)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (9)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (3)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	lb $21, $16 #carga letra en hex de memoria
+	addi $9, $0, (1)
+	mult $22, $21, $9
+	addi $16, $16, (1)
+	add $18, $18, $22
+	
+	beq $18, $6, sumar
+
+KarpRobin:
+	beq $17, $13, end
+	### newHash = Base*[oldHash - a*base^(n-1)] + d
+	lb $21, $15 #con la posicion texto[m] = a
+	addi $15, $15, (1) #actualiza la pos de memoria en +1	
+	mult $22, $21, $10 #9 = text[m]*base^(n-1) = a*base^(n-1)
+	sub $18, $18, $22  #oldHash - a*base^(n-1)
+	mult $18, $18, $8  #Base*[oldHash - a*base^(n-1)]
+	lb $21, $16        #con la posicion de memoria text[m'] = d
+	addi $16, $16, (1) #actualiza la pos de memoria en +1
+	add $18, $18, $21  #newHash = Base*[oldHash - a*base^(n-1)] + d
+	subi $17, $17, (1)
+	beq $18, $6, sumar 
+	j KarpRobin
+
+sumar:
+	addi $5, $5, (1) #actualiza la cantidad de patrones acertados
+	j KarpRobin	
+	
+end:
+	j end

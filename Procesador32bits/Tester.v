@@ -47,7 +47,7 @@ CPU cpu(clk_xHZ, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Reg8, Reg9,
 Reg10, Reg11, Reg12, Reg13, Reg14, Reg15, Reg16, Reg17, Reg18, Reg19,
 Reg20, Reg21, Reg22, Reg23, Reg24, Reg25);
 	
-seven_segments sevenSegs1 ( .num(Reg12), //input 
+seven_segments sevenSegs1 ( .num(Reg5), //input 
 									.seven_Segs(led_Reg) //output
 );
 						

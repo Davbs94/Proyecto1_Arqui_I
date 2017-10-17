@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Process1
-Mon Oct 16 10:04:20 2017
+Tue Oct 17 02:18:45 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -77,7 +77,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 16 10:04:20 2017       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 17 02:18:45 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Process1                                    ;
 ; Top-level Entity Name           ; Tester                                      ;
@@ -264,14 +264,14 @@ agreement for further details.
 +---------------------------------------------+----------------------------------+
 ; Resource                                    ; Usage                            ;
 +---------------------------------------------+----------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1554                             ;
+; Estimate of Logic utilization (ALMs needed) ; 1555                             ;
 ;                                             ;                                  ;
 ; Combinational ALUT usage for logic          ; 2326                             ;
-;     -- 7 input functions                    ; 18                               ;
-;     -- 6 input functions                    ; 509                              ;
+;     -- 7 input functions                    ; 19                               ;
+;     -- 6 input functions                    ; 508                              ;
 ;     -- 5 input functions                    ; 134                              ;
-;     -- 4 input functions                    ; 212                              ;
-;     -- <=3 input functions                  ; 1453                             ;
+;     -- 4 input functions                    ; 213                              ;
+;     -- <=3 input functions                  ; 1452                             ;
 ;                                             ;                                  ;
 ; Dedicated logic registers                   ; 1306                             ;
 ;                                             ;                                  ;
@@ -283,7 +283,7 @@ agreement for further details.
 ;                                             ;                                  ;
 ; Maximum fan-out node                        ; clock_divider:DIV1|divcounter[8] ;
 ; Maximum fan-out                             ; 1651                             ;
-; Total fan-out                               ; 17868                            ;
+; Total fan-out                               ; 17872                            ;
 ; Average fan-out                             ; 4.43                             ;
 +---------------------------------------------+----------------------------------+
 
@@ -297,7 +297,7 @@ agreement for further details.
 ;    |CPU:cpu|                                 ; 849 (0)             ; 1297 (0)                  ; 2622464           ; 2          ; 0    ; 0            ; |Tester|CPU:cpu                                                                                                                   ; CPU                 ; work         ;
 ;       |ALU:alu|                              ; 220 (220)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |Tester|CPU:cpu|ALU:alu                                                                                                           ; ALU                 ; work         ;
 ;       |Adder:pcplus4|                        ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Adder:pcplus4                                                                                                     ; Adder               ; work         ;
-;       |ControlUnit:unidadControl|            ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|ControlUnit:unidadControl                                                                                         ; ControlUnit         ; work         ;
+;       |ControlUnit:unidadControl|            ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|ControlUnit:unidadControl                                                                                         ; ControlUnit         ; work         ;
 ;       |MemDatos:memDatos|                    ; 16 (0)              ; 6 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|MemDatos:memDatos                                                                                                 ; MemDatos            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 16 (0)              ; 6 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|MemDatos:memDatos|altsyncram:altsyncram_component                                                                 ; altsyncram          ; work         ;
 ;             |altsyncram_rhn1:auto_generated| ; 16 (0)              ; 6 (6)                     ; 524288            ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|MemDatos:memDatos|altsyncram:altsyncram_component|altsyncram_rhn1:auto_generated                                  ; altsyncram_rhn1     ; work         ;
@@ -313,7 +313,7 @@ agreement for further details.
 ;       |Mux2x1:muxDirW|                       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux2x1:muxDirW                                                                                                    ; Mux2x1              ; work         ;
 ;       |Mux2x1:muxValA|                       ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux2x1:muxValA                                                                                                    ; Mux2x1              ; work         ;
 ;       |Mux2x1:muxValB|                       ; 352 (352)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux2x1:muxValB                                                                                                    ; Mux2x1              ; work         ;
-;       |Mux4x1:MuxDireccionPC|                ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux4x1:MuxDireccionPC                                                                                             ; Mux4x1              ; work         ;
+;       |Mux4x1:MuxDireccionPC|                ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux4x1:MuxDireccionPC                                                                                             ; Mux4x1              ; work         ;
 ;       |Mux4x1:MuxResultSelect|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|Mux4x1:MuxResultSelect                                                                                            ; Mux4x1              ; work         ;
 ;       |PC:pc|                                ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|PC:pc                                                                                                             ; PC                  ; work         ;
 ;       |PipeDE:pipeDE|                        ; 2 (2)               ; 97 (97)                   ; 0                 ; 0          ; 0    ; 0            ; |Tester|CPU:cpu|PipeDE:pipeDE                                                                                                     ; PipeDE              ; work         ;
@@ -584,10 +584,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 33:1               ; 16 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; Yes        ; |Tester|CPU:cpu|PipeDE:pipeDE|ValBTMP[7]                                                                                          ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Tester|CPU:cpu|PipeDE:pipeDE|CodigoALUTMP[2]                                                                                     ;
 ; 24:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |Tester|CPU:cpu|PipeDE:pipeDE|MuxDatoTMP                                                                                          ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|Mux2x1:muxValA|C[2]                                                                                               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|Mux2x1:muxValA|C[15]                                                                                              ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|MemInst:memInst|altsyncram:altsyncram_component|altsyncram_6bf1:auto_generated|mux_ahb:mux2|l3_w17_n0_mux_dataout ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|ALU:alu|Result[4]                                                                                                 ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|ALU:alu|Result[30]                                                                                                ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|ALU:alu|Result[10]                                                                                                ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |Tester|CPU:cpu|ALU:alu|Result[28]                                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1107,13 +1107,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; reg2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg3  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg4  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; reg5  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg6  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg7  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg8  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg9  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg10 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg11 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reg12 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg13 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg14 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg15 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1148,14 +1148,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         2 data inputs ; 56                          ;
 ;         3 data inputs ; 347                         ;
 ;         4 data inputs ; 154                         ;
-;     extend            ; 18                          ;
-;         7 data inputs ; 18                          ;
-;     normal            ; 1345                        ;
-;         2 data inputs ; 306                         ;
-;         3 data inputs ; 338                         ;
-;         4 data inputs ; 58                          ;
+;     extend            ; 19                          ;
+;         7 data inputs ; 19                          ;
+;     normal            ; 1344                        ;
+;         2 data inputs ; 304                         ;
+;         3 data inputs ; 339                         ;
+;         4 data inputs ; 59                          ;
 ;         5 data inputs ; 134                         ;
-;         6 data inputs ; 509                         ;
+;         6 data inputs ; 508                         ;
 ;     shared            ; 55                          ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 17                          ;
@@ -1174,7 +1174,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1184,7 +1184,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Oct 16 10:04:03 2017
+    Info: Processing started: Tue Oct 17 02:18:26 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Process1 -c Process1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1474,19 +1474,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_sve File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/db/alt_u_div_sve.tdf Line: 23
 Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[0] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[1] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[2] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[3] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[4] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[5] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[6] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[12][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu|RegisterBank:registerBank|RF[5][1] File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/RegisterBank.v Line: 79
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[7] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
     Warning (13013): Ports D and ENA on the latch are fed by the same signal seven_segments:sevenSegs1|lpm_divide:Mod2|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider|StageOut[156]~synth File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/db/alt_u_div_mve.tdf Line: 203
 Warning (13012): Latch seven_segments:sevenSegs1|seven_Segs[8] has unsafe behavior File: D:/Proyectos/Proyecto1_Arqui_I/Procesador32bits/output_files/seven_segments.v Line: 8
@@ -1531,10 +1531,10 @@ Info (21057): Implemented 3902 device resources after synthesis - the final reso
     Info (21064): Implemented 352 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
-    Info: Peak virtual memory: 790 megabytes
-    Info: Processing ended: Mon Oct 16 10:04:20 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 807 megabytes
+    Info: Processing ended: Tue Oct 17 02:18:45 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

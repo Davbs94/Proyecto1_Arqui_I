@@ -434,12 +434,13 @@ begin
 		 crtlMuxValA <= 0;
 		 crtlMuxValB <= 0;
 		 CodigoALUIN <= 4'b1000;
-		 MuxResultIN <= 2'b01;
-		 MuxDirWriteIN <= 1;
+		 MuxResultIN <= 2'b10;
+		 MuxDirWriteIN <= 0;
 		 MuxDirMemIN <= 1;
 		 MuxDatoIN <= 1;
 		 WriteMemIN <= 0;
 		 WriteRegIN <= 1;
+		 
 	end
 	//NOP
 	else if(Opcode == 5'b10111)
